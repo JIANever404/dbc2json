@@ -92,7 +92,7 @@ def main(argv):
         error("Little and big endian flag can't be used together")
     data_header["name"] = os.path.splitext(os.path.basename(inputfile))[0]
     data_header["version"] = version
-    db = cantools.database.load_file(inputfile)
+    db = cantools.database.load_file(inputfile,encoding='utf-8')
     for message in db.messages:
         # if prefix:
         #     message.name = "{}.{}".format(prefix, message.name)
@@ -174,6 +174,26 @@ def main(argv):
                 signal_json["multiplexer_ids"] = signal.multiplexer_ids
             else:
                 signal_json["multiplexer_ids"] = []
+
+            enum_values = signal.conversion.choices
+            if enum_values is not None:
+                # print(type(enum_values))
+                enum_list = []
+                for value, description in enum_values.items():
+                    # print(type(value))
+                    # print(value)
+                    # print(type(description))
+                    # print(description)
+                    enum_dict = {
+                        "name": description.name,
+                        "value": description.value
+                    }
+                    enum_list.append(enum_dict)
+                
+                signal_json["enums"] = enum_list
+            else:
+                signal_json["enums"] = []
+
             signal_list.append(signal_json)
 
     output_all = data_header 
@@ -182,8 +202,8 @@ def main(argv):
         "canItems" : messages_list
     }
     output_all["data"] = data_json
-    with open(outputfile, 'w') if outputfile else sys.stdout as outfile:
-        json.dump(output_all, outfile, indent=4)
+    with open(outputfile, 'w', encoding='utf-8') if outputfile else sys.stdout as outfile:
+        json.dump(output_all, outfile, ensure_ascii=False, indent=4)
         outfile.write('\n')
     if outputfile:
         print("Finished")
