@@ -51,6 +51,7 @@ def main(argv):
     rev = False
     bigE = False
     litE = False
+    signalIndex = 0
     try:
         opts, args = getopt.getopt(argv, "i:o:p:v:b:wjfrelh", ["in", "out", "prefix", "version", "bus", "mode", "j1939", "fd", "reversed", "big-endian", "little-endian", "help"])
     except getopt.GetoptError:
@@ -95,10 +96,14 @@ def main(argv):
     for message in db.messages:
         # if prefix:
         #     message.name = "{}.{}".format(prefix, message.name)
+        msg_max_frequency = 0.0
+        if message.cycle_time is not None and message.cycle_time > 0:
+            msg_max_frequency = message_json["msg_max_frequency"] = 1000.0 / message.cycle_time
         if bigE or litE or rev:
             message_json = {
                 # "id": hex(message.frame_id),
-                "id": message.frame_id,
+                "canId": message.frame_id,
+                "channelId": 1,
                 "name": message.name,
                 "bus": bus,
                 "length": message.length,
@@ -107,22 +112,23 @@ def main(argv):
                 "is_extended": message.is_extended_frame,
                 "byte_frame_is_big_endian": bigE,
                 "bit_position_reversed": rev,
+                "msg_max_frequency" : msg_max_frequency,
                 "signals": []
             }
         else:
             message_json = {
                 # "id": hex(message.frame_id),
-                "id": message.frame_id,
+                "canId": message.frame_id,
+                "channelId": 1,
                 "name": message.name,
                 "bus": bus,
                 "length": message.length,
                 "is_fd": fd,
                 "is_j1939": j1939,
                 "is_extended": message.is_extended_frame,
+                "msg_max_frequency" : msg_max_frequency,
                 "signals": []
             }
-        if message.cycle_time is not None and message.cycle_time > 0:
-            message_json["max_frequency"] = 1000.0 / message.cycle_time
         hex_value = str(hex(message.frame_id))
         messages_list.append(message_json)
         signal_list = message_json["signals"]
@@ -132,32 +138,50 @@ def main(argv):
             SName = signal
             # name = "{}.{}".format(formatName(message.name), formatName(signal.name))
             name = signal.name
+            signalIndex = signalIndex + 1
             signal_json = {
-                "name": name,
+                "signalName": name,
+                "signalIndex" : signalIndex,
                 # "generic_name": formatName(signal.name),
-                "bit_position": signal.start,
-                "bit_size": signal.length,
-                "factor": signal.scale,
-                "offset": signal.offset,
+                "startBit": signal.start,
+                "length": signal.length,
+                "factor": float(signal.scale),
+                "offset": float(signal.offset),
                 "byte_order": signal.byte_order,
-                "writable": mode
+                # "writable": mode
             }
             if message.cycle_time is not None and message.cycle_time > 0:
                 signal_json["max_frequency"] = 1000.0 / message.cycle_time
+            else:
+                signal_json["max_frequency"] = 0.0
             if signal.unit is not None:
                 signal_json["unit"] = signal.unit
+            else:
+                signal_json["unit"] = "none"
             if signal.minimum is not None:
-                signal_json["min_value"] = signal.minimum
+                signal_json["min"] = float(signal.minimum)
+            else:
+                signal_json["min"] = 0.0
             if signal.maximum is not None:
-                signal_json["max_value"] = signal.maximum
+                signal_json["max"] = float(signal.maximum)
+            else:
+                signal_json["max"] = 0.0
             if signal.is_multiplexer:
-                signal_json["multiplexer"] = 'Multiplexor'
+                signal_json["multiplexer"] = True
+            else:
+                signal_json["multiplexer"] = False
             if signal.multiplexer_ids:
-                signal_json["multiplexer"] = signal.multiplexer_ids[0]
+                signal_json["multiplexer_ids"] = signal.multiplexer_ids
+            else:
+                signal_json["multiplexer_ids"] = []
             signal_list.append(signal_json)
 
     output_all = data_header 
-    output_all["messages"] = messages_list
+    data_json = {
+        "canEncodeMode" : 1,
+        "canItems" : messages_list
+    }
+    output_all["data"] = data_json
     with open(outputfile, 'w') if outputfile else sys.stdout as outfile:
         json.dump(output_all, outfile, indent=4)
         outfile.write('\n')
