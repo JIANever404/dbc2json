@@ -93,12 +93,13 @@ def main(argv):
     data_header["version"] = version
     db = cantools.database.load_file(inputfile)
     for message in db.messages:
-        if prefix:
-            message.name = "{}.{}".format(prefix, message.name)
+        # if prefix:
+        #     message.name = "{}.{}".format(prefix, message.name)
         if bigE or litE or rev:
             message_json = {
-                "id": hex(message.frame_id),
-                "name": formatName(message.name),
+                # "id": hex(message.frame_id),
+                "id": message.frame_id,
+                "name": message.name,
                 "bus": bus,
                 "length": message.length,
                 "is_fd": fd,
@@ -106,32 +107,34 @@ def main(argv):
                 "is_extended": message.is_extended_frame,
                 "byte_frame_is_big_endian": bigE,
                 "bit_position_reversed": rev,
-                "signals": {}
+                "signals": []
             }
         else:
             message_json = {
-                "id": hex(message.frame_id),
-                "name": formatName(message.name),
+                # "id": hex(message.frame_id),
+                "id": message.frame_id,
+                "name": message.name,
                 "bus": bus,
                 "length": message.length,
                 "is_fd": fd,
                 "is_j1939": j1939,
                 "is_extended": message.is_extended_frame,
-                "signals": {}
+                "signals": []
             }
         if message.cycle_time is not None and message.cycle_time > 0:
             message_json["max_frequency"] = 1000.0 / message.cycle_time
         hex_value = str(hex(message.frame_id))
         messages_list.append(message_json)
-        signal_dict = message_json["signals"]
+        signal_list = message_json["signals"]
         signals = message.signals
 
         for signal in signals:
             SName = signal
-            name = "{}.{}".format(formatName(message.name), formatName(signal.name))
+            # name = "{}.{}".format(formatName(message.name), formatName(signal.name))
+            name = signal.name
             signal_json = {
                 "name": name,
-                "generic_name": formatName(signal.name),
+                # "generic_name": formatName(signal.name),
                 "bit_position": signal.start,
                 "bit_size": signal.length,
                 "factor": signal.scale,
@@ -151,7 +154,7 @@ def main(argv):
                 signal_json["multiplexer"] = 'Multiplexor'
             if signal.multiplexer_ids:
                 signal_json["multiplexer"] = signal.multiplexer_ids[0]
-            signal_dict[signal.name] = signal_json
+            signal_list.append(signal_json)
 
     output_all = data_header 
     output_all["messages"] = messages_list
