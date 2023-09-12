@@ -1,20 +1,21 @@
 #!/usr/bin/python3
 
-# Script to convert a Vector CANoe ".dbc" file in the right json format for Automotive Grade Linux (AGL), these software is a the moment a feasability study
-# created 16. May 2020 by walzert version 0.1 
-# the python3 requirements are noted in requirements.txt 
-# the software is based on cantools https://github.com/eerimoq/cantools
-# it converts messages from a dbc file -i (input) and add the dataheader for agl on top of the messages
+# Script to convert a Vector CANoe ".dbc" file in the right JSON format for Automotive Grade Linux (AGL), this software is currently a feasibility study.
+# Created on 16th May 2020 by walzert version 0.1 
+# The Python3 requirements are noted in requirements.txt.
+# The software is based on cantools: https://github.com/eerimoq/cantools.
+# It converts messages from a dbc file (-i input) and adds the data header for AGL on top of the messages.
 
-import sys, getopt, os
+import sys
+import getopt
+import os
 import cantools
-from pprint import pprint
-import json 
+import json
 
 with open("{}/header.json".format(os.path.dirname(os.path.realpath(__file__)))) as json_file:
     data_header = json.load(json_file)
 
-messages_dict = {"messages" : {}}
+messages_list = []
 
 def usage():
     usage = """dbc2json.py [ -i | --in ] [ -o | --out ] [ -v | --version ] [ -p || --prefix ] [ -b | --bus ] [ -m | --mode ] [ -j | --j1939 ] [ -f | --fd ] [ -r | --reversed ] [ -e | --big-endian ] [ -l | --little-endian ] [ -h | --help ]
@@ -23,7 +24,7 @@ def usage():
     - prefix: message's name prefix
     - version: signals version
     - bus: bus name
-    - mode: signal is writeable
+    - mode: signal is writable
     - j1939: signals used j1939
     - fd: signals used FD
     - reversed: bits position are reversed
@@ -51,7 +52,7 @@ def main(argv):
     bigE = False
     litE = False
     try:
-        opts, args = getopt.getopt(argv,"i:o:p:v:b:wjfrelh",["in", "out", "prefix", "version", "bus", "mode", "j1939", "fd", "reversed", "big-endian", "little-endian", "help"])
+        opts, args = getopt.getopt(argv, "i:o:p:v:b:wjfrelh", ["in", "out", "prefix", "version", "bus", "mode", "j1939", "fd", "reversed", "big-endian", "little-endian", "help"])
     except getopt.GetoptError:
         usage()
     for opt, arg in opts:
@@ -79,15 +80,15 @@ def main(argv):
             bigE = True
         elif opt in ("-l", "--little-endian"):
             litE = True
-        
+
     if not inputfile:
         usage()
     if not inputfile.endswith(".dbc"):
-        error("wrong input file type (must be .dbc)")
+        error("Wrong input file type (must be .dbc)")
     if not bus:
         bus = "hs"
     if bigE and litE:
-        error("little and big endian flag can't be used together")
+        error("Little and big endian flag can't be used together")
     data_header["name"] = os.path.splitext(os.path.basename(inputfile))[0]
     data_header["version"] = version
     db = cantools.database.load_file(inputfile)
@@ -96,33 +97,35 @@ def main(argv):
             message.name = "{}.{}".format(prefix, message.name)
         if bigE or litE or rev:
             message_json = {
-                "name" : formatName(message.name),
-                "bus" : bus,
+                "id": hex(message.frame_id),
+                "name": formatName(message.name),
+                "bus": bus,
                 "length": message.length,
                 "is_fd": fd,
                 "is_j1939": j1939,
                 "is_extended": message.is_extended_frame,
                 "byte_frame_is_big_endian": bigE,
                 "bit_position_reversed": rev,
-                "signals" : {}
+                "signals": {}
             }
         else:
             message_json = {
-                "name" : formatName(message.name),
-                "bus" : bus,
+                "id": hex(message.frame_id),
+                "name": formatName(message.name),
+                "bus": bus,
                 "length": message.length,
                 "is_fd": fd,
                 "is_j1939": j1939,
                 "is_extended": message.is_extended_frame,
-                "signals" : {}
+                "signals": {}
             }
-        if message.cycle_time != None and message.cycle_time > 0:
+        if message.cycle_time is not None and message.cycle_time > 0:
             message_json["max_frequency"] = 1000.0 / message.cycle_time
         hex_value = str(hex(message.frame_id))
-        messages_dict["messages"][hex_value] = message_json
-        signal_dict = messages_dict["messages"][hex_value]["signals"]
+        messages_list.append(message_json)
+        signal_dict = message_json["signals"]
         signals = message.signals
-    
+
         for signal in signals:
             SName = signal
             name = "{}.{}".format(formatName(message.name), formatName(signal.name))
@@ -136,13 +139,13 @@ def main(argv):
                 "byte_order": signal.byte_order,
                 "writable": mode
             }
-            if message.cycle_time != None and message.cycle_time > 0:
+            if message.cycle_time is not None and message.cycle_time > 0:
                 signal_json["max_frequency"] = 1000.0 / message.cycle_time
-            if signal.unit != None:
+            if signal.unit is not None:
                 signal_json["unit"] = signal.unit
-            if signal.minimum != None:
+            if signal.minimum is not None:
                 signal_json["min_value"] = signal.minimum
-            if signal.maximum != None:
+            if signal.maximum is not None:
                 signal_json["max_value"] = signal.maximum
             if signal.is_multiplexer:
                 signal_json["multiplexer"] = 'Multiplexor'
@@ -151,7 +154,7 @@ def main(argv):
             signal_dict[signal.name] = signal_json
 
     output_all = data_header 
-    output_all.update(messages_dict)
+    output_all["messages"] = messages_list
     with open(outputfile, 'w') if outputfile else sys.stdout as outfile:
         json.dump(output_all, outfile, indent=4)
         outfile.write('\n')

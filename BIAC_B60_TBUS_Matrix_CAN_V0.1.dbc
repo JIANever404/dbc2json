@@ -1,0 +1,2482 @@
+VERSION "0.1"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TBOX GW
+VAL_TABLE_ EMS_CAPE2_St_ReplacementSubID 6 "postive Reply SC" 5 "Response to Set Learnt Command" 4 "third frame of SKC and SC" 3 "second frame of SKC and SC" 2 "first frame of SKC and SC" 1 "Report EMS learning status" ;
+VAL_TABLE_ EMS_CAPE1_St_LearningResponse 1 "EMS learnt" 0 "EMS virgin" ;
+VAL_TABLE_ EMS_CAPE1_St_LearningResponseSub 5 "Response to Set Learnt Command" 1 "Report EMS learning status" ;
+
+
+BO_ 119 EMS_CAPE_2: 8 TBOX
+ SG_ EMS_CAPE2_N_LearningData0 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE2_N_LearningData6 : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMS_CAPE2_N_LearningData5 : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE2_N_LearningData4 : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE2_N_LearningData3 : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE2_N_LearningData1 : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE2_N_LearningData2 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE2_St_ReplacementSubID : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 117 EMS_CAPE_1: 2 TBOX
+ SG_ EMS_CAPE1_St_LearningResponse : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EMS_CAPE1_St_ResponseSubID : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 112 TBOX_BDC_CAPE_AUTH_Response: 8 TBOX
+ SG_ SUB_ID_70 : 7|8@0+ (1,0) [0|255] ""  GW
+ SG_ RAND_NUM_REPLY : 15|32@0+ (1,0) [0|4294967295] ""  GW
+
+BO_ 121 TBOX_Learning_Response: 8 TBOX
+ SG_ SubID79 : 7|8@0+ (1,0) [0|255] ""  GW
+ SG_ TBOX_St_Learn : 15|8@0+ (1,0) [0|255] ""  GW
+
+BO_ 122 TBOX_BDC_CAPE_Reply: 8 TBOX
+ SG_ SUB_ID_7A : 7|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_0_7A : 15|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_1_7A : 23|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_2_7A : 31|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_3_7A : 39|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_4_7A : 47|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_5_7A : 55|8@0+ (1,0) [0|255] ""  GW
+ SG_ LEARNING_DATA_6_7A : 63|8@0+ (1,0) [0|255] ""  GW
+
+BO_ 1093 TBOX_NM: 8 TBOX
+ SG_ TBOX_NM_DEST_ADDRESS : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ TBOX_NM_ALIVE : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TBOX_NM_RING : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TBOX_NM_LIMPHOME : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TBOX_NM_SLEEP_IND : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TBOX_NM_SLEEP_ACK : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1321 TBOX_1: 8 TBOX
+ SG_ TBOX1_St_Warning : 2|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_St_Remote : 5|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX1_St_TmBt : 6|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_St_ConnectAPA : 7|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_Cmd_RemoteStop : 16|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_Cmd_RemoteStart : 17|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_St_RemoteControlMode : 21|4@0+ (1,0) [0|15] ""  GW
+ SG_ TBOX1_St_Mode : 22|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_Cmd_RearDefrost : 23|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX1_St_Wokcondition : 36|1@0+ (1,0) [0|1] ""  GW
+
+BO_ 1576 TBOX_3: 8 TBOX
+ SG_ TBOX3_Cmd_BlowerMode : 2|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX3_Cmd_DualSt : 3|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_Recir : 4|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_RearDef : 5|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_AC : 6|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_Auto : 7|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_Blowerlevel : 11|4@0+ (1,0) [0|15] ""  GW
+ SG_ TBOX3_Set_AirPuriAndAutoLink : 12|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Set_UnlockFreshAirSwitch : 13|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Set_AnionSwitch : 14|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Set_AQSSwitch : 15|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_AcSys : 16|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_Anion : 17|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_PM25 : 18|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_DriTemp : 23|5@0+ (1,0) [0|31] ""  GW
+ SG_ TBOX3_St_VideoUploadFail : 24|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_EHCMute : 25|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_St_Mode : 26|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Set_PaTemp : 31|5@0+ (1,0) [0|31] ""  GW
+ SG_ TBOX3_Cmd_TeleRestoreParking : 33|2@0+ (1,0) [0|3] ""  GW
+ SG_ TBOX3_Cmd_ParkingType : 35|2@0+ (1,0) [0|3] ""  GW
+ SG_ TBOX3_St_PhotoUploadFail : 36|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_DVRPhoto : 38|2@0+ (1,0) [0|3] ""  GW
+ SG_ TBOX3_Set_PM25Switch : 39|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_ParkingInMode : 43|2@0+ (1,0) [0|3] "bit"  GW
+ SG_ TBOX3_Cmd_ControlRequest : 44|1@0+ (1,0) [0|1] ""  GW
+ SG_ TBOX3_Cmd_ParkingControl : 47|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX3_Cmd_ParkingOutDirection : 53|2@0+ (1,0) [0|3] ""  GW
+ SG_ TBOX3_Cmd_ParkingOutType : 55|2@0+ (1,0) [0|3] ""  GW
+
+BO_ 1577 TBOX_2: 8 TBOX
+ SG_ TBOX2_St_RemoteControlMode : 1|2@0+ (1,0) [0|3] ""  GW
+ SG_ TBOX2_Cmd_LFSeatHeating : 4|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_DoorLock : 7|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_LFSeatVentilation : 12|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_RFSeatVentilation : 15|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_SecondRSeatHeat : 20|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_SecondLSeatHeat : 23|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_SecondRSeatVentilation : 28|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_SecondLSeatVentilation : 31|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_RFSeatHeating : 35|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_WLMDriver : 38|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_WLMPassager : 42|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_WLMRearLeft : 45|3@0+ (1,0) [0|7] ""  GW
+ SG_ TBOX2_Cmd_ControlSSCU : 59|4@0+ (1,0) [0|15] ""  GW
+ SG_ TBOX2_Cmd_ControlSRCU : 63|4@0+ (1,0) [0|15] ""  GW
+
+BO_ 101 BDC_TBOX_AUTHEN_RAND_NUMBER: 8 GW
+ SG_ SUB_ID_65 : 7|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ RAND_NUM_CHALLENGE : 15|32@0+ (1,0) [0|4294967295] ""  TBOX
+ SG_ PEPS_TM_AUTHRESULT : 47|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ AUTHEN_ERROR_TYPE : 55|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 120 BDC_TBOX_Learning: 8 GW
+ SG_ SubID78 : 7|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078 : 15|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078_1 : 23|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078_2 : 31|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078_3 : 39|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078_4 : 47|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078_5 : 55|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ Lrngdata078_6 : 63|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 272 TCM_1: 8 GW
+ SG_ TCM1_N_OilTemperature : 7|8@0+ (1,-40) [-40|214] "C"  TBOX
+ SG_ TCM1_N_Longtermtorque : 47|11@0+ (1,-100) [-100|1000] "Nm"  TBOX
+
+BO_ 323 EPS_1: 8 GW
+ SG_ EPS1_St_DrvStrInterDete : 0|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ EPS1_St_TrqSnsrSts : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EPS1_St_CurrMod : 3|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPS1_St_SteerMod : 5|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPS1_St_FailSts : 7|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPS1_N_SteeringTorque : 15|11@0+ (0.01,-7.11) [-7.11|7.11] "Nm"  TBOX
+ SG_ EPS1_St_EPSControl : 17|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPS1_St_Requestfeedback : 19|2@0+ (1,0) [0|3] "bit"  TBOX
+ SG_ EPS1_F_DrvStrInterDete : 20|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ EPS1_N_ReqTorqueFeedack : 31|11@0+ (0.01,-10.24) [-10.24|10.23] ""  TBOX
+ SG_ EPS1_F_ReqTorqueFeedack : 36|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EPS1_RollingCounter : 51|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ EPS1_Checksum : 63|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 383 EMS_13: 8 GW
+ SG_ EMS13_F_ActualWhlTorque : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS13_F_RegenTrqWhlMax : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS13_F_ActualBrRegenTrqWhl : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS13_N_RollingCounter : 7|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ EMS13_N_ActualBrRegenTrqWhl : 15|16@0+ (1,-30000) [-30000|30000] "Nm"  TBOX
+ SG_ EMS13_N_BrRegenTrqWhlMax : 31|16@0+ (1,-30000) [-30000|30000] "Nm"  TBOX
+ SG_ EMS13_N_ActualWhlTorque : 47|16@0+ (1,-30000) [-30000|30000] "Nm"  TBOX
+ SG_ EMS13_N_Checksum : 63|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 384 SAS_1: 8 GW
+ SG_ SAS1_St_SASSensorInformation : 8|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SAS1_N_RotationSpeed : 23|8@0+ (4,0) [0|1016] "degree/ sec"  TBOX
+ SG_ SAS1_N_SteeringAngle : 31|16@0+ (0.1,-780) [-780|780] "degree"  TBOX
+
+BO_ 416 EMS_1: 8 GW
+ SG_ EMS1_F_AcceleratorPedal : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS1_F_EngineSpeed : 4|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS1_F_TargetIdleSpeed : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS1_N_EngineSpeed : 15|16@0+ (1,0) [0|7000] "rpm"  TBOX
+ SG_ EMS1_N_TargetIdleSpeed : 31|16@0+ (1,0) [0|7000] "rpm"  TBOX
+ SG_ EMS1_N_AcceleratorPedal : 63|8@0+ (0.392156862745098,0) [0|100] "%"  TBOX
+
+BO_ 418 EMS_8: 8 GW
+ SG_ EMS8_N_ActualTorque : 4|13@0+ (0.1,-100) [-100|700] "Nm"  TBOX
+ SG_ EMS8_F_ActualTorque : 5|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS8_F_DriverReqTorque_TCU : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS8_F_ActualTorqueNoTCU : 7|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS8_N_DriverReqTorque_TCU : 23|13@0+ (0.1,-100) [-100|700] "Nm"  TBOX
+ SG_ EMS8_F_BSGEstTrqAct : 26|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS8_N_ActualTorqueNoTCU : 39|13@0+ (0.1,-100) [-100|700] "Nm"  TBOX
+ SG_ EMS8_N_BSGEstTrqAct : 42|7@0+ (1,-60) [-60|60] "Nm"  TBOX
+ SG_ EMS8_RollingCounter : 51|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ EMS8_Checksum : 63|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 544 IPC_6: 8 GW
+ SG_ IPC6_N_FuelLevel : 7|8@0+ (0.39215,0) [0|100] "%"  TBOX
+ SG_ IPC6_St_FuelLevelSensor : 15|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ IPC6_N_VehicleSpeedIndi : 23|8@0+ (1,0) [0|255] "km/h"  TBOX
+
+BO_ 562 EDS_1: 8 GW
+ SG_ EDS1_St_RearEDSLck : 11|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ EDS1_St_FrontEDSLck : 31|4@0+ (1,0) [0|15] ""  TBOX
+
+BO_ 640 EMS_5: 8 GW
+ SG_ EMS5_St_WaterInOilTelltale : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_F_BrakePedal : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_FuelQuality : 16|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_BrakePedal : 17|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_FuelCut : 21|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_Cruise : 22|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_LimpHome : 32|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_MILTelltale : 34|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_CruiseMainSw : 37|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_OilPressureTelltale : 38|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_SVSTelltale : 39|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_EngineStart : 42|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_GlowTelltale : 43|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_EngineCranking : 44|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_EngineRunning : 47|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS5_St_GPFReIndic : 55|2@0+ (1,0) [0|3] ""  TBOX
+
+BO_ 657 APA_2: 8 GW
+ SG_ APA2_St_APAStatus : 18|3@0+ (1,0) [0|7] "bit"  TBOX
+ SG_ APA2_St_Request : 55|4@0+ (1,0) [0|15] "bit"  TBOX
+
+BO_ 784 WCBS_EPB_1: 8 GW
+ SG_ EPB1_St_WarningLamp : 1|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPB1_St_ParkLamp : 3|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPB1_St_ActuatorStR : 12|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ EPB1_St_ActuatorStL : 15|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ EPB1_St_4LParkingWarning : 42|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EPB1_Disp_WithoutBrake : 44|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EPB1_Disp_WithoutSeatBelt : 45|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EPB1_St_EPBSwitch : 47|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EPB1_St_NoParkingWarning : 50|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EPB1_St_DynamicApply : 55|2@0+ (1,0) [0|3] ""  TBOX
+
+BO_ 785 WCBS_ESP_5: 8 GW
+ SG_ WCBS_ESP5_F_VehicleSpeed : 8|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP5_N_VehicleSpeed : 39|13@0+ (0.05625,0) [0|259.9875] "km/h"  TBOX
+
+BO_ 792 WCBS_ESP_1: 8 GW
+ SG_ WCBS_ESP1_St_ABSActive : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_St_TCSActive : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_Cmd_EPBPark : 4|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WCBS_ESP1_St_AutoHoldTelltale : 5|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_St_AutoHold : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_St_ESPTCSOffTelltale : 13|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WCBS_ESP1_St_ESPFailureTelltale : 14|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_St_HDCTelltale : 17|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WCBS_ESP1_St_ESPTCSActiveTelltal : 20|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_St_EBDTelltale : 22|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_St_ABSTelltale : 23|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP1_N_OdometerRoll : 31|16@0+ (1,0) [0|65535] "pulses"  TBOX
+ SG_ WCBS_ESP1_St_BrakeFluidW : 45|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 800 TCCU_1: 8 GW
+ SG_ TCCU1_St_4H4L : 11|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ TCCU1_St_Fault : 31|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ TCCU1_St_ShiftCondition : 39|4@0+ (1,0) [0|15] ""  TBOX
+
+BO_ 847 BMS_11: 8 GW
+ SG_ BMS11_RollingCounter : 3|4@0+ (1,0) [0|15] "_"  TBOX
+ SG_ BMS11_St_PackRelay : 6|3@0+ (1,0) [0|7] "bit"  TBOX
+ SG_ BMS11_St_CBalOpen : 24|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CANBusoff : 25|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_ECUCommFault : 29|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_HSDFault : 30|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_AFECommFault : 31|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_Ocp : 32|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_OverTemp : 33|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PackUvp : 34|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PackOvp : 35|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CellLUvp : 36|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CellLOvp : 37|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PwrUvp : 38|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PwrOvp : 39|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PackTempSampFault : 40|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_InstCurrSampFault : 41|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CellVolSampFault : 42|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_StackVolSampFault : 43|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CellDpDschrgUnr : 44|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CellDeepChrg : 45|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PackDeepDschrg : 46|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_PackDeepChrg : 47|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CbClosefail : 48|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_EqualizeFail : 49|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CbStuck : 50|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CbUnexpectedOpen : 51|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CellDpDschrgCbOpen : 56|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_Sotp : 57|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_SOCHighop : 58|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_SOCHighup : 59|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ BMS11_St_CbLife : 61|2@0+ (1,0) [0|3] "bit"  TBOX
+
+BO_ 848 SDM_1: 8 GW
+ SG_ SDM1_St_AirbagWarningLamp : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SDM1_St_RRSeatbelt : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SDM1_St_RMSeatbelt : 4|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SDM1_St_RLSeatbelt : 5|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SDM1_St_PASeatbelt : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SDM1_St_DRSeatbelt : 7|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ SDM1_St_AirbagDeployed : 15|4@0+ (1,0) [0|15] ""  TBOX
+
+BO_ 866 BDC_BCM_4: 8 GW
+ SG_ BCM4_St_SSCUSsPosnVRAPP : 23|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ BCM4_St_SunRPosn : 39|4@0+ (1,0) [0|15] ""  TBOX
+
+BO_ 880 EMS_3: 8 GW
+ SG_ EMS3_F_AirFlowLoad : 4|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS3_F_TurboPressure : 5|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS3_F_FuelInjected : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS3_N_FuleInjected : 15|16@0+ (0.001,0) [0|65.535] "mlitre"  TBOX
+ SG_ EMS3_N_TurboPressure : 31|8@0+ (1,0) [0|255] "Kpa"  TBOX
+ SG_ EMS3_N_AirFlowLoad : 39|8@0+ (0.392156862745098,0) [0|100] "%"  TBOX
+
+BO_ 885 AC_2: 8 GW
+ SG_ AC2_St_Blowerlevel : 3|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ AC2_St_BlowerMode : 7|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ AC2_St_PM25 : 8|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_FrontDef : 11|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_ACSys : 12|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_AutoDisplay : 13|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_ACReq : 14|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_SYNCDisplay : 15|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_Cmd_RBlowerMode : 18|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ AC2_N_DriTempDisp : 23|5@0+ (0.5,18) [18|32] "deg. C"  TBOX
+ SG_ AC2_St_RemoteStartResponse : 24|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_RearDef : 25|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_DispRequest : 26|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_N_PaTempDisp : 31|5@0+ (0.5,18) [18|32] "deg. C"  TBOX
+ SG_ AC2_N_PM25 : 47|10@0+ (1,0) [0|1000] "微克/立方米"  TBOX
+ SG_ AC2_St_Recir : 49|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ AC2_St_AirPuriAndAutoLink : 50|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_UnlockFreshAirSwitch : 51|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_AnionSwitch : 52|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC2_St_AQSSwitch : 53|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 928 EMS_2: 8 GW
+ SG_ EMS2_F_CrsCtrlSetSpd : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS2_N_CrsCtrlSetSpd : 15|13@0+ (0.05,0) [0|409.5] "kph"  TBOX
+ SG_ EMS2_F_ThrottleAngle : 40|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ EMS2_N_ThrottleAngle : 55|8@0+ (0.392156862745098,0) [0|100] "%"  TBOX
+
+BO_ 992 TCM_2: 8 GW
+ SG_ TCM2_F_ActuralGear : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TCM2_N_TargetGear : 15|8@0+ (1,0) [0|255] ""  TBOX
+ SG_ TCM2_St_LimpHome : 28|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TCM2_St_GearboxTelltale : 31|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TCM2_N_ActuralGear : 39|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 1173 WDDC_1: 8 GW
+ SG_ WDDC1_N_LWadeDeepth : 7|8@0+ (1,0) [0|255] "cm"  TBOX
+ SG_ WDDC1_N_RWadeDeepth : 15|8@0+ (1,0) [0|255] "cm"  TBOX
+ SG_ WDDC1_N_MaxWadeDeepth : 31|8@0+ (1,0) [0|255] "cm"  TBOX
+ SG_ WDDC1_St_LWDSensorFault : 32|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WDDC1_W_WDOverLimit : 36|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WDDC1_St_WadeMode : 38|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WDDC1_St_ReadyATSMode : 39|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WDDC1_St_RWDSensorFault : 47|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1184 BDC_BCM_1: 8 GW
+ SG_ BCM1_St_RWindowDefrost : 3|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ BCM1_St_HighBeam : 8|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_Horn : 13|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_PositionLamp : 15|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_AntiThelfIndication : 18|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ BCM1_St_PositionLamp : 19|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_RightTurnLamp : 20|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_RightTurnLamp : 21|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_LeftTurnLamp : 22|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_LeftTurnLamp : 23|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_Hood : 24|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_TrunkDoor : 25|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_RRDoor : 26|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_LRDoor : 27|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_PassengerDoor : 28|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_DriverDoor : 29|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_PasDoorLock : 30|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_LFDoorLock : 31|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Sw_ReverseGear : 34|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Sw_Brake : 35|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_LowBeam : 40|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_HighBeam : 41|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_Trunklock : 44|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_LowBeam : 46|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_DRL : 51|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ BCM1_St_BrakeFluidLowWarning : 52|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_CentralUnlock : 53|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_CentralLock : 54|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_BrakeLamp : 57|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_Reverselamp : 59|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_RearFoglamp : 60|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_RearFoglamp : 61|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_St_FrontFoglamp : 62|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BCM1_Cmd_FrontFoglamp : 63|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1203 BDC_BCM_2: 8 GW
+ SG_ BCM2_Cmd_TrunkUnLock : 56|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1248 TCM_5: 8 GW
+ SG_ TCM5_St_TCUDriverWarnings0 : 7|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TCM5_St_Shiftpattern : 30|7@0+ (1,0) [0|127] ""  TBOX
+ SG_ TCM5_St_EngStartEnable : 31|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1264 ORIM_1: 8 GW
+ SG_ ORIM1_F_AtmosphericPressure : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_St_CalibrationCompassZeroE : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_St_CalibrationTiltingAngle : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_St_CalibrationGyroZeroEnd : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_F_CompassDirection : 4|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_St_CompassDirection : 7|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ ORIM1_N_AtmosphericPressure : 15|13@0+ (0.1,300) [300|1100] "hpa"  TBOX
+ SG_ ORIM1_F_AltitudeHeigh : 16|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_F_AboutTiltingAngle : 17|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_F_AroundThePitchAngle : 18|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_N_AltitudeHeight : 31|14@0+ (1,-500) [-500|9000] "m"  TBOX
+ SG_ ORIM1_N_CompassAngleSignal : 32|9@0+ (1,0) [0|360] "°"  TBOX
+ SG_ ORIM1_F_CompassAngleSignal : 33|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ORIM1_N_AroundThePitchAngle : 55|8@0+ (1,-40) [-40|40] "°"  TBOX
+ SG_ ORIM1_N_AboutTiltingAngle : 63|8@0+ (1,-60) [-60|60] "°"  TBOX
+
+BO_ 1297 WCBS_ATS_1: 8 GW
+ SG_ ATS1_St_TCCUSwitch : 3|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ ATS1_RollingCounter : 7|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ ATS1_St_ConfirmedMode : 11|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ ATS1_Cmd_RequestedMode : 15|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ ATS1_W_Hint6 : 16|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint5 : 17|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint4 : 18|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint3 : 19|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint2 : 20|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint1 : 21|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint14 : 24|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint13 : 25|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint12 : 26|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint11 : 27|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint10 : 28|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint9 : 29|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint8 : 30|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint7 : 31|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint22 : 32|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint21 : 33|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint20 : 34|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint19 : 35|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint18 : 36|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint17 : 37|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint16 : 38|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint15 : 39|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint27 : 43|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint26 : 44|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint25 : 45|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint24 : 46|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_W_Hint23 : 47|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ATS1_Checksum : 63|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 1313 IPC_4: 8 GW
+ SG_ IPC4_N_AverFuelConsum : 7|12@0+ (0.1,0) [0|409.5] "L /100KM"  TBOX
+ SG_ IPC4_N_ResiFuel : 11|12@0+ (0.1,0) [0|409.5] "L"  TBOX
+ SG_ IPC4_N_InstanFuelConsum : 31|12@0+ (0.1,0) [0|409.5] "L /100KM"  TBOX
+ SG_ IPC4_N_EnduranceMileage : 35|12@0+ (1,0) [0|4095] "KM"  TBOX
+ SG_ IPC4_N_OdoRemain : 55|16@0+ (1,-10239) [-10239|55295] "Km"  TBOX
+
+BO_ 1328 AC_1: 8 GW
+ SG_ AC1_Sw_Request : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC1_F_ACTemperature : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC1_F_IncarTemp : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC1_N_ACTemperature : 39|8@0+ (1,-40) [-40|100] "deg. C"  TBOX
+ SG_ AC1_N_IncarTemp : 47|8@0+ (1,-40) [-40|100] "deg. C"  TBOX
+
+BO_ 1344 BDC_TPMS: 8 GW
+ SG_ TPMS_St_TirePosition : 2|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ TPMS_St_Signal : 7|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TPMS_N_LFPressure : 15|8@0+ (1.373,0) [0|350.115] "kpa"  TBOX
+ SG_ TPMS_N_RFPressure : 23|8@0+ (1.373,0) [0|350.115] "kpa"  TBOX
+ SG_ TPMS_N_RRPressure : 31|8@0+ (1.373,0) [0|350.115] "kpa"  TBOX
+ SG_ TPMS_N_LRPressure : 39|8@0+ (1.373,0) [0|350.115] "kpa"  TBOX
+ SG_ TPMS_N_TireTemperature : 47|8@0+ (1,-40) [-40|125] "degC"  TBOX
+ SG_ TPMS_St_RFPWarning : 52|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ TPMS_St_LFPWarning : 55|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ TPMS_St_SystemWarning : 56|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TPMS_St_TWarning : 57|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ TPMS_St_LRPWarning : 60|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ TPMS_St_RRPWarning : 63|3@0+ (1,0) [0|7] ""  TBOX
+
+BO_ 1360 DSM_1: 8 GW
+ SG_ DSM1_St_DriSeatVentilation : 48|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ DSM1_St_DriSeatHeat : 51|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ DSM1_St_PasSeatVentilation : 58|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ DSM1_St_PasSeatHeat : 61|3@0+ (1,0) [0|7] ""  TBOX
+
+BO_ 1377 BDC_BCM_7: 8 GW
+ SG_ BCM7_St_SecondRSeatVentilation : 10|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ BCM7_St_SecondLSeatVentilation : 13|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ BCM7_St_SecondRSeatHeat : 20|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ BCM7_St_SecondLSeatHeat : 23|3@0+ (1,0) [0|7] ""  TBOX
+
+BO_ 1392 BDC_CAPE_1: 8 GW
+ SG_ CAPE1_St_REMOTEStRes : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE1_St_PowerMode : 5|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ CAPE1_F_PowerMode : 7|2@0+ (1,0) [0|2] ""  TBOX
+ SG_ CAPE1_St_RemoteStart : 19|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ CAPE1_St_StRelayHSD : 31|2@0+ (1,0) [0|3] ""  TBOX
+
+BO_ 1393 ESCL_1: 8 GW
+ SG_ ESCL1_St_TextRotateSteeringWheel : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ESCL1_St_TextGarage : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ESCL1_St_TextDeect : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ ESCL1_St_TextSteeringNotUnlock : 15|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1408 BDC_CAPE_2: 8 GW
+ SG_ CAPE2_St_MiuMsgReqN7 : 32|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE2_St_MiuMsgReqN4 : 35|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE2_St_MiuMsgReqN2 : 37|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE2_St_MiuMsgReqN1 : 38|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE2_St_MiuMsgReqN0 : 39|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE2_St_MiuMsgReqN10 : 45|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ CAPE2_St_MiuMsgReqN9 : 46|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1424 PAS_1: 8 GW
+ SG_ PAS1_F_FLCMalfunction : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_F_FLMalfunction : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_St_FLC : 4|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_FL : 7|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_F_FRMalfunction : 8|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_F_FRCMalfunction : 9|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_St_FR : 12|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_FRC : 15|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_F_RLCMalfunction : 16|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_F_RLMalfunction : 17|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_St_RLC : 20|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_RL : 23|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_F_RRMalfunction : 24|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_F_RRCMalfunction : 25|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_St_RR : 28|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_RRC : 31|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_SpeakerWarn : 35|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PAS1_St_WorkMODE : 58|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_ReverseWarnTone : 61|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ PAS1_St_FPAS : 62|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1425 APA_4: 8 GW
+ SG_ APA4_St_ParkingType : 1|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ APA4_St_Tracking : 6|3@0+ (1,0) [0|7] "bit"  TBOX
+ SG_ APA4_St_TrackingFunction : 7|1@0+ (1,0) [0|1] "bit"  TBOX
+ SG_ APA4_St_TrackingRecover : 11|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ APA4_St_LanguageSetting : 15|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ APA4_St_TrackingQuit : 23|5@0+ (1,0) [0|31] ""  TBOX
+ SG_ APA4_St_ParkingOutMode : 34|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ APA4_St_QuitIndication : 44|5@0+ (1,0) [0|31] ""  TBOX
+ SG_ APA4_St_RecoverINTIndication : 47|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ APA4_St_RequestFeedback : 55|2@0+ (1,0) [0|3] ""  TBOX
+
+BO_ 1445 EMS_12: 8 GW
+ SG_ EMS12_St_ErrorLevel : 23|3@0+ (1,0) [0|7] ""  TBOX
+
+BO_ 1472 EMS_4: 8 GW
+ SG_ EMS4_F_CoolantTemperature : 5|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EMS4_F_Barometer : 7|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EMS4_N_CoolantTemperature : 15|8@0+ (1,-40) [-40|215] "deg. C"  TBOX
+ SG_ EMS4_N_Barometer : 23|8@0+ (0.5,0) [0|127] "kPa"  TBOX
+
+BO_ 1504 EGSM_1: 8 GW
+ SG_ EGSM1_St_DrvRqShft : 7|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ EGSM1_St_StayInM : 9|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EGSM1_St_DrvRqPark : 12|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EGSM1_St_DrvRqUnlock : 14|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EGSM1_St_EShiftFault : 23|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1552 WCBS_ESP_15: 8 GW
+ SG_ WCBS_ESP15_ACCActiveTimes : 7|24@0+ (1,0) [0|16777215] ""  TBOX
+ SG_ WCBS_ESP15_SolenoidTempture : 31|8@0+ (1,-40) [-40|210] "℃/bit"  TBOX
+ SG_ WCBS_ESP15_IgnitionTimes : 35|20@0+ (1,0) [0|1048575] ""  TBOX
+ SG_ WCBS_ESP15_SolenoidTemInformatio : 39|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ WCBS_ESP15_BatteryVoltageMin : 63|8@0+ (0.1,0) [0|25] "V"  TBOX
+
+BO_ 1553 WCBS_ESP_16: 8 GW
+ SG_ WCBS_ESP16_FaultInformmation : 7|10@0+ (1,0) [0|1023] ""  TBOX
+ SG_ WCBS_ESP16_RWUEPBSwitch : 12|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WCBS_ESP16_RWUActive : 13|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ WCBS_ESP16_BrakePressureMax : 23|8@0+ (1,0) [0|250] "bar"  TBOX
+ SG_ WCBS_ESP16_AEBActiveTimes : 31|16@0+ (1,0) [0|65535] ""  TBOX
+ SG_ WCBS_ESP16_BrakeTimes03G : 47|24@0+ (1,0) [0|16777215] ""  TBOX
+
+BO_ 1568 IPC_1: 8 GW
+ SG_ IPC1_F_OdometerParameter : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ IPC1_St_OilLevelWarning : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ IPC1_N_OdoMeter : 23|32@0+ (0.01,0) [0|2000000] "km"  TBOX
+
+BO_ 1600 WCBS_ESP_3: 8 GW
+ SG_ WCBS_ESP3_N_FLWheelSpeed : 5|14@0+ (0.0625,0) [0|300] "km/h"  TBOX
+ SG_ WCBS_ESP3_F_FLWheelSpeed : 7|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WCBS_ESP3_N_FRWheelSpeed : 21|14@0+ (0.0625,0) [0|300] "km/h"  TBOX
+ SG_ WCBS_ESP3_F_FRWheelSpeed : 23|2@0+ (1,0) [0|3] ""  TBOX
+
+BO_ 1602 WCBS_ESP_18: 8 GW
+ SG_ WCBS_ESP18_BrushlessMotorTemptur : 7|10@0+ (1,-100) [-100|500] "℃"  TBOX
+ SG_ WCBS_ESP18_BrushlessMotorTime : 23|16@0+ (0.1,0) [0|6553] "s"  TBOX
+ SG_ WCBS_ESP18_Reserved1 : 39|16@0+ (1,0) [0|65535] ""  TBOX
+ SG_ WCBS_ESP18_Reserved2 : 55|16@0+ (1,0) [0|65535] ""  TBOX
+
+BO_ 1603 WCBS_ESP_17: 8 GW
+ SG_ WCBS_ESP17_N_BrakeTimes05G : 7|24@0+ (1,0) [0|16777215] ""  TBOX
+ SG_ WCBS_ESP17_N_BrakeTimes1G : 31|24@0+ (1,0) [0|16777215] ""  TBOX
+ SG_ WCBS_ESP17_N_BrakePedalStroke : 63|8@0+ (0.25,-10) [-10|53] "mm"  TBOX
+
+BO_ 1616 WCBS_ESP_4: 8 GW
+ SG_ WCBS_ESP4_N_RLWheelSpeed : 37|14@0+ (0.0625,0) [0|300] "km/h"  TBOX
+ SG_ WCBS_ESP4_F_RLWheelSpeed : 39|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ WCBS_ESP4_N_RRWheelSpeed : 53|14@0+ (0.0625,0) [0|300] "km/h"  TBOX
+ SG_ WCBS_ESP4_F_RRWheelSpeed : 55|2@0+ (1,0) [0|3] ""  TBOX
+
+BO_ 1643 BSG_1: 8 GW
+ SG_ BSG3_N_PosTrqPt : 7|10@0+ (0.1,0) [0|55] ""  TBOX
+ SG_ BSG3_N_NegTrqPt : 12|10@0+ (0.1,-102.3) [-55|0] ""  TBOX
+ SG_ BSG3_F_PosTrqPt : 13|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BSG3_F_NegTrqPt : 18|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BSG3_RollingCounter : 51|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ BSG3_Checksum : 63|8@0+ (1,0) [0|255] ""  TBOX
+
+BO_ 1646 BSG_Diag_1: 8 GW
+ SG_ BSG_Diag1_St_BrushWearFault : 0|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_CANComErr : 1|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_CANComInv : 2|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_DCVolSenFault : 3|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_ExcSCFault : 4|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_InverterFault : 5|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_LoadDump : 6|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_OvrHeat : 7|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_OverVoltage : 8|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_PHXCurrSenFault : 9|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_PosSenFault : 10|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_RevSpdFault : 11|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_RotorOverCurr : 12|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_StatorFault : 13|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_StatorOverCurr : 14|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_StalledRotorProt : 15|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_TorqLevelFault : 16|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_UnlockPTLFault : 17|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_HighSpeed : 18|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_UnderVolProt : 19|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_CurExcSCHigh : 20|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_CurExcSCLow : 21|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_CurExcOffset : 22|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_InvTempSenFault : 23|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_3V3VolFault : 24|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_12VolFault : 25|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_15SWVolFault : 26|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_12VRefVolFault : 27|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_OperModeProt : 28|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_VolCtrlFault : 29|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_ExcDrStaMoFault : 30|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_CrashFault : 32|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_12VVolHigh : 33|1@0+ (1,0) [0|1] "-"  TBOX
+ SG_ BSG_Diag1_St_12VVolLow : 34|1@0+ (1,0) [0|1] "-"  TBOX
+
+BO_ 1654 AC_3: 8 GW
+ SG_ AC3_St_Auto : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ AC3_St_RBlowerMode : 6|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ AC3_St_RBlowerLevel : 15|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ AC3_N_RTempDisp : 23|5@0+ (0.5,18) [18|32] "deg. C"  TBOX
+
+BO_ 1686 DVR_2: 8 GW
+ SG_ DVR2_St_Recording : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_St_SD : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_PhotoOverflow : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_ParkMonitor : 3|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_SavFil : 4|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_CommunFail : 5|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_MPUStart : 6|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_CamMalf : 7|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_SDFormat : 14|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ DVR2_W_SD : 15|1@0+ (1,0) [0|1] ""  TBOX
+
+BO_ 1963 TBOX_DLC_Res: 8 TBOX
+
+BO_ 2016 TBOX_EMS_Req: 8 TBOX
+
+BO_ 2017 TBOX_TCU_Req: 8 TBOX
+
+BO_ 2019 TBOX_TCCU_Req: 8 TBOX
+
+BO_ 2018 TBOX_EGSM_Req: 8 TBOX
+
+BO_ 1808 TBOX_WCBS_Req: 8 TBOX
+
+BO_ 1809 TBOX_FDCA_Req: 8 TBOX
+
+BO_ 1815 TBOX_EDS_Req: 8 TBOX
+
+BO_ 1819 TBOX_EPS_Req: 8 TBOX
+
+BO_ 2021 TBOX_BSG_Req: 8 TBOX
+
+BO_ 2020 TBOX_BMS_Req: 8 TBOX
+
+BO_ 1822 TBOX_DCDC_Req: 8 TBOX
+
+BO_ 1824 TBOX_EHC_Req: 8 TBOX
+
+BO_ 2033 TBOX_SDM_Req: 8 TBOX
+
+BO_ 1827 TBOX_AC_Req: 8 TBOX
+
+BO_ 1828 TBOX_IPC_Req: 8 TBOX
+
+BO_ 1829 TBOX_BDC_Req: 8 TBOX
+
+BO_ 1830 TBOX_DSM_Req: 8 TBOX
+
+BO_ 1831 TBOX_AVMAPA_Req: 8 TBOX
+
+BO_ 1832 TBOX_PAS_Req: 8 TBOX
+
+BO_ 1834 TBOX_ESCL_Req: 8 TBOX
+
+BO_ 1836 TBOX_ORIM_Req: 8 TBOX
+
+BO_ 1838 TBOX_DCURF_Req: 8 TBOX
+
+BO_ 1839 TBOX_DCULF_Req: 8 TBOX
+
+BO_ 1850 TBOX_CSS_Req: 8 TBOX
+
+BO_ 1851 TBOX_SWFB_Req: 8 TBOX
+
+BO_ 1852 TBOX_FHS_Req: 8 TBOX
+
+BO_ 1853 TBOX_RHS_Req: 8 TBOX
+
+BO_ 1854 TBOX_AMP_Req: 8 TBOX
+
+BO_ 1855 TBOX_HUD_Req: 8 TBOX
+
+BO_ 1856 TBOX_DVR_Req: 8 TBOX
+
+BO_ 1858 TBOX_SVM_Req: 8 TBOX
+
+BO_ 1859 TBOX_ALC_Req: 8 TBOX
+
+BO_ 1861 TBOX_WDDC_Req: 8 TBOX
+
+BO_ 1862 TBOX_CMWRLH_Req: 8 TBOX
+
+BO_ 1863 TBOX_WCM_Req: 8 TBOX
+
+BO_ 1817 TBOX_IBS_Req: 8 TBOX
+
+BO_ 2015 TBOX_Diag_Function: 8 TBOX
+
+BO_ 1835 DLC_TBOX_Req: 8 GW
+
+BO_ 2024 EMS_TBOX_Res: 8 GW
+
+BO_ 2025 TCU_TBOX_Res: 8 GW
+
+BO_ 2027 TCCU_TBOX_Res: 8 GW
+
+BO_ 2026 EGSM_TBOX_Res: 8 GW
+
+BO_ 1936 WCBS_TBOX_Res: 8 GW
+
+BO_ 1937 FDCA_TBOX_Res: 8 GW
+
+BO_ 1943 EDS_TBOX_Res: 8 GW
+
+BO_ 1947 EPS_TBOX_Res: 8 GW
+
+BO_ 2029 BSG_TBOX_Res: 8 GW
+
+BO_ 2028 BMS_TBOX_Res: 8 GW
+
+BO_ 1950 DCDC_TBOX_Res: 8 GW
+
+BO_ 1952 EHC_TBOX_Res: 8 GW
+
+BO_ 2041 SDM_TBOX_Res: 8 GW
+
+BO_ 1955 AC_TBOX_Res: 8 GW
+
+BO_ 1956 IPC_TBOX_Res: 8 GW
+
+BO_ 1957 BDC_TBOX_Res: 8 GW
+
+BO_ 1958 DSM_TBOX_Res: 8 GW
+
+BO_ 1959 AVMAPA_TBOX_Res: 8 GW
+
+BO_ 1960 PAS_TBOX_Res: 8 GW
+
+BO_ 1962 ESCL_TBOX_Res: 8 GW
+
+BO_ 1964 ORIM_TBOX_Res: 8 GW
+
+BO_ 1966 DCURF_TBOX_Res: 8 GW
+
+BO_ 1967 DCULF_TBOX_Res: 8 GW
+
+BO_ 1978 CSS_TBOX_Res: 8 GW
+
+BO_ 1979 SWFB_TBOX_Res: 8 GW
+
+BO_ 1980 FHS_TBOX_Res: 8 GW
+
+BO_ 1981 RHS_TBOX_Res: 8 GW
+
+BO_ 1982 AMP_TBOX_Res: 8 GW
+
+BO_ 1983 HUD_TBOX_Res: 8 GW
+
+BO_ 1984 DVR_TBOX_Res: 8 GW
+
+BO_ 1986 SVM_TBOX_Res: 8 GW
+
+BO_ 1987 ALC_TBOX_Res: 8 GW
+
+BO_ 1989 WDDC_TBOX_Res: 8 GW
+
+BO_ 1990 CMWRLH_TBOX_Res: 8 GW
+
+BO_ 1991 WCM_TBOX_Res: 8 GW
+
+BO_ 1945 IBS_TBOX_Res: 8 GW
+
+
+
+CM_ "Version:V0.0 , Date:2021.01.04 , Author: , Review: , Approval: , Description:初始版本 ;
+Version:V0.0 , Date:2021.05.20 , Author: , Review: , Approval: , Description:据HUD的输入HUD-Draft-20210519对信号列表进行更改 ;
+Version:V0.0 , Date:2021.05.21 , Author: , Review: , Approval: , Description:1、根据薛工2021.5.17的邮件输入，对BDC的相关需求进行了信号修订
+2、根据周娟工的2021.5.21的邮件输入，对DVR、APA的相关需求进行了信号修订 ;
+Version:V0.0 , Date:2021.05.24 , Author: , Review: , Approval: , Description:1、根据薛工2021.5.24的邮件输入，对BDC的语音、远程控制天窗和天窗帘进行了修订 ;
+Version:V0.0 , Date:2021.05.27 , Author: , Review: , Approval: , Description:1、根据周工2021.5.27的邮件输入，对DVR相关的信号进行了修订 ;
+Version:V0.0 , Date:2021.05.28 , Author: , Review: , Approval: , Description:1、根据主机确认进行修订 ;
+Version:V0.0 , Date:2021.06.02 , Author: , Review: , Approval: , Description:1、根据AC确认进行修订删除 ;
+Version:V0.0 , Date:2021.06.03 , Author: , Review: , Approval: , Description:1、修改BCM_";
+CM_ SG_ 119 EMS_CAPE2_St_ReplacementSubID "The status of ReplacementSubID";
+CM_ SG_ 117 EMS_CAPE1_St_LearningResponse "The status of LearningResponse";
+CM_ SG_ 117 EMS_CAPE1_St_ResponseSubID "The Status of LearningResponseSubID";
+CM_ SG_ 112 SUB_ID_70 "on change";
+CM_ SG_ 112 RAND_NUM_REPLY "T-Box reply the random number challenge to PEPS";
+CM_ SG_ 121 SubID79 "Refer to learning specification";
+CM_ SG_ 121 TBOX_St_Learn "TBOX Learning Status";
+CM_ SG_ 122 SUB_ID_7A "Refer to learning specification.";
+CM_ SG_ 122 LEARNING_DATA_0_7A "SKC and SC or LEARNING STATUS";
+CM_ SG_ 122 LEARNING_DATA_1_7A "SKC and SC";
+CM_ SG_ 122 LEARNING_DATA_2_7A "SKC and SC";
+CM_ SG_ 122 LEARNING_DATA_3_7A "SKC and SC";
+CM_ SG_ 122 LEARNING_DATA_4_7A "SKC and SC";
+CM_ SG_ 122 LEARNING_DATA_5_7A "SKC and SC";
+CM_ SG_ 122 LEARNING_DATA_6_7A "SKC and SC";
+CM_ SG_ 1093 TBOX_NM_DEST_ADDRESS "Destination address";
+CM_ SG_ 1093 TBOX_NM_ALIVE "Alive bit";
+CM_ SG_ 1093 TBOX_NM_RING "Ring bit";
+CM_ SG_ 1093 TBOX_NM_LIMPHOME "Limphome bit";
+CM_ SG_ 1093 TBOX_NM_SLEEP_IND "Sleep indication bit";
+CM_ SG_ 1093 TBOX_NM_SLEEP_ACK "ACK bit";
+CM_ SG_ 1321 TBOX1_St_Warning "the warning information to inform IPC";
+CM_ SG_ 1321 TBOX1_St_Remote "the Remote status";
+CM_ SG_ 1321 TBOX1_St_TmBt "蓝牙连接状态
+TmBtSts";
+CM_ SG_ 1321 TBOX1_St_ConnectAPA "手机APP与TBOX之间的连接状态";
+CM_ SG_ 1321 TBOX1_Cmd_RemoteStop "Send this command 6 times to PEPS for remote stopping";
+CM_ SG_ 1321 TBOX1_Cmd_RemoteStart "Send this command 6 times to PEPS for remote starting";
+CM_ SG_ 1321 TBOX1_St_RemoteControlMode "REMOTE control mode";
+CM_ SG_ 1321 TBOX1_St_Mode "indicate the working status of TBOX";
+CM_ SG_ 1321 TBOX1_Cmd_RearDefrost "Rear defrost button,BCM receive
+when Tm received APP signals, Tm send this signal =active 6 times in cycle, then send this signal =inactive in cycle后除霜
+RESERVE";
+CM_ SG_ 1321 TBOX1_St_Wokcondition "TBOX状态
+TBOX_Status";
+CM_ SG_ 1576 TBOX3_Cmd_BlowerMode "Blowing mode Set 
+ 吹风模式";
+CM_ SG_ 1576 TBOX3_Cmd_DualSt "Dual zone Set
+Reserve";
+CM_ SG_ 1576 TBOX3_Cmd_Recir "Recirculate Set";
+CM_ SG_ 1576 TBOX3_Cmd_RearDef "Rear defrost Set";
+CM_ SG_ 1576 TBOX3_Cmd_AC "AC  Set";
+CM_ SG_ 1576 TBOX3_Cmd_Auto "Auto Set";
+CM_ SG_ 1576 TBOX3_Cmd_Blowerlevel "Blowerlevel Set ,风量级别";
+CM_ SG_ 1576 TBOX3_Set_AirPuriAndAutoLink "空气净化与AUTO联动信号
+Air purification and auto linkage Switch";
+CM_ SG_ 1576 TBOX3_Set_UnlockFreshAirSwitch "解锁新风开关信号
+Unlock the fresh air";
+CM_ SG_ 1576 TBOX3_Set_AnionSwitch "负离子开关信号";
+CM_ SG_ 1576 TBOX3_Set_AQSSwitch "AQS开关信号";
+CM_ SG_ 1576 TBOX3_Cmd_AcSys "this signal is to set  AC system";
+CM_ SG_ 1576 TBOX3_Cmd_Anion "Reserve
+Anion set 负离子发生器开关";
+CM_ SG_ 1576 TBOX3_Cmd_PM25 "Reserve
+PM2.5Set";
+CM_ SG_ 1576 TBOX3_Cmd_DriTemp "Drive temperature set";
+CM_ SG_ 1576 TBOX3_St_VideoUploadFail "DVR视频上传失败，给主机反馈上传失败";
+CM_ SG_ 1576 TBOX3_Cmd_EHCMute "EHC 静音（MUTE）";
+CM_ SG_ 1576 TBOX3_St_Mode "indicate the working status of TBOX";
+CM_ SG_ 1576 TBOX3_Set_PaTemp "Passenge temperature set";
+CM_ SG_ 1576 TBOX3_Cmd_TeleRestoreParking "遥控恢复泊车
+Tele_Restore_Parking";
+CM_ SG_ 1576 TBOX3_Cmd_ParkingType "泊车类型
+Parking_Type";
+CM_ SG_ 1576 TBOX3_St_PhotoUploadFail "DVR拍照上传失败，给主机反馈上传失败";
+CM_ SG_ 1576 TBOX3_Cmd_DVRPhoto "DVR拍照";
+CM_ SG_ 1576 TBOX3_Set_PM25Switch "PM2.5开关信号";
+CM_ SG_ 1576 TBOX3_Cmd_ParkingInMode "泊入方式
+Parking in Mode";
+CM_ SG_ 1576 TBOX3_Cmd_ControlRequest "握手请求指令
+TBOX_APA_Control_Request";
+CM_ SG_ 1576 TBOX3_Cmd_ParkingControl "泊车控制
+TBOX_Cmd_Parking_Control";
+CM_ SG_ 1576 TBOX3_Cmd_ParkingOutDirection "泊出方向
+Parking_Out_Direction";
+CM_ SG_ 1576 TBOX3_Cmd_ParkingOutType "泊出方式
+Parking_Out_Type";
+CM_ SG_ 1577 TBOX2_St_RemoteControlMode "REMOTE control mode";
+CM_ SG_ 1577 TBOX2_Cmd_LFSeatHeating "left front seat heating command";
+CM_ SG_ 1577 TBOX2_Cmd_DoorLock "Commad request to lock/unlock the four doors or panic or unlock tailgate.控制四门解闭锁，寻车";
+CM_ SG_ 1577 TBOX2_Cmd_LFSeatVentilation "left front seat ventilation command";
+CM_ SG_ 1577 TBOX2_Cmd_RFSeatVentilation "Right front seat ventilation command";
+CM_ SG_ 1577 TBOX2_Cmd_SecondRSeatHeat "The Light of Second row Right Seat Heat
+BCM2_St_SecondRSeat Heat";
+CM_ SG_ 1577 TBOX2_Cmd_SecondLSeatHeat "The Light of Second row Left Seat Heat
+BCM2_St_SecondLSeat Heat";
+CM_ SG_ 1577 TBOX2_Cmd_SecondRSeatVentilation "The Light of Second row Right Seat Heat（Reserved）";
+CM_ SG_ 1577 TBOX2_Cmd_SecondLSeatVentilation "The Light of Second row Left SeatVentilation（Reserved）";
+CM_ SG_ 1577 TBOX2_Cmd_RFSeatHeating "Right front seat heating command";
+CM_ SG_ 1577 TBOX2_Cmd_WLMDriver "Driver side window control command from LIN (used for testing)
+驾驶员侧门窗命令
+Reserve";
+CM_ SG_ 1577 TBOX2_Cmd_WLMPassager "passenger side window control command from LIN
+副驾驶侧门窗命令";
+CM_ SG_ 1577 TBOX2_Cmd_WLMRearLeft "Rear left side window control command from LIN
+左后门窗命令";
+CM_ SG_ 1577 TBOX2_Cmd_ControlSSCU "远程控制遮阳帘，Reserved";
+CM_ SG_ 1577 TBOX2_Cmd_ControlSRCU "远程控制天窗";
+CM_ SG_ 101 SUB_ID_65 "Define this message is for RAND NUMBER or AuthResult
+This signal for PEPS only.";
+CM_ SG_ 101 RAND_NUM_CHALLENGE "Challenge from PEPS for authentication (for PEPS and T-module)
+It is only used when SUB_ID_65 is 1. (for PEPS)";
+CM_ SG_ 101 PEPS_TM_AUTHRESULT "Authentication result  Information 
+It is only used when SUB_ID_65 is 2. 
+(This signal for PEPS remote control only.)";
+CM_ SG_ 101 AUTHEN_ERROR_TYPE "Error Information
+This signal is used to indicate the authentication result when failed for PEPS. 
+ when SUB_ID_65 is 2 and PEPS_TM_AUTHRESULT is 1 , the value 2,3,4 could be sent 
+(This signal for PEPS only.)";
+CM_ SG_ 120 SubID78 "It indicates the different meaning for Learning function, it is only for TBOX learning
+0:Not used
+1:System Learning active (Req TBOX learning status)
+2:Request TBOX to store the first frame of SKCandSC
+3:Request TBOX to store the second frame of SKCandSC
+4:Request TBOX to store the third frame of SKCandSC
+5:Request set TBOX learning status to learnt
+6:Reserved";
+CM_ SG_ 120 Lrngdata078 "SC and SKC data";
+CM_ SG_ 120 Lrngdata078_1 "SC and SKC data";
+CM_ SG_ 120 Lrngdata078_2 "SC and SKC data";
+CM_ SG_ 120 Lrngdata078_3 "SC and SKC data";
+CM_ SG_ 120 Lrngdata078_4 "SC and SKC data";
+CM_ SG_ 120 Lrngdata078_5 "SC and SKC data";
+CM_ SG_ 120 Lrngdata078_6 "SC and SKC data";
+CM_ SG_ 272 TCM1_N_OilTemperature "When the signal is invalid, the value 0xFF will be sent.（E=N-40）";
+CM_ SG_ 272 TCM1_N_Longtermtorque "Long term torque reduction(Limitation) request for transmission protection.
+(Both EngTqAtCluReqdByTrsmFast and EngTqAtCluLmtdByTrsm can be sent at the same time, for example when a shift occurs during torque limitation. For Diesel engine please take minimum value of both signals. For gasoline engine EngTqAtCluLmtdByTrsm request is controlled by throttle only and EngTqInfAtCluReqdByTrsmFast by spark retard only.)                                              
+0x44C: No request
+0x7FF: Invalid";
+CM_ SG_ 323 EPS1_St_DrvStrInterDete "驾驶员方向盘干预检测状态";
+CM_ SG_ 323 EPS1_St_TrqSnsrSts "EPS torque sensor status";
+CM_ SG_ 323 EPS1_St_CurrMod "Applied steering mode currently";
+CM_ SG_ 323 EPS1_St_SteerMod "EPS steering mode";
+CM_ SG_ 323 EPS1_St_FailSts "The status of the EPS （EPS的故障状态）";
+CM_ SG_ 323 EPS1_N_SteeringTorque "Value of driver input torque(Clockwise rotation is '-' and anti-Clockwise rotation is '+')";
+CM_ SG_ 323 EPS1_St_EPSControl "EPS Control Status
+EPS握手信号";
+CM_ SG_ 323 EPS1_St_Requestfeedback "state of Handshake between EPS and APA";
+CM_ SG_ 323 EPS1_F_DrvStrInterDete "驾驶员方向盘干预检测状态有效性";
+CM_ SG_ 323 EPS1_N_ReqTorqueFeedack "Request Torque Feedack and TorqueDir
+EPS执行的ADAS系统请求扭矩及扭矩方向";
+CM_ SG_ 323 EPS1_F_ReqTorqueFeedack "RequestTorqueFeedackValid
+EPS执行的ADAS系统请求扭矩有效性";
+CM_ SG_ 323 EPS1_RollingCounter "Message counter for the message transmitted.
+The transmitter shall update the value of signal RollingCounter each time the message is transmitted, even if no data updated in the message.
+The value of the rolling counter increases according to the sequence such as '0,1,2...15,0,1,2...15', and the initial value will be set to zero once transmission is started.";
+CM_ SG_ 323 EPS1_Checksum "Checksum = (byte0+byte1+…+byte 6）and 0xFF";
+CM_ SG_ 383 EMS13_F_ActualWhlTorque "The valid indication of EMS13_N_ActualWhlTorque";
+CM_ SG_ 383 EMS13_F_RegenTrqWhlMax "The valid indication of EMS13_N_BrRegenTrqWhlMax";
+CM_ SG_ 383 EMS13_F_ActualBrRegenTrqWhl "The valid indication of EMS13_N_ActualBrRegenTrqWhl";
+CM_ SG_ 383 EMS13_N_RollingCounter "Message counter for the message transmitted.
+The transmitter shall update the value of signal RollingCounter each time the message is transmitted, even if no data updated in the message.
+The value of the rolling counter increases according to the sequence such as '0,1,2...15,0,1,2...15', and the initial value will be set to zero once transmission is started.";
+CM_ SG_ 383 EMS13_N_ActualBrRegenTrqWhl "1、Actual Brake Regeneration Torque Wheel
+2、车辆在N、4HL、4LL不进行制动能量回收。4H采用前后4:6扭矩分配（最终分配比例以WCBS与分动器校核为准），VCU发总的轮端扭矩，WCBS判断各轮。
+VCU收到WCBS发的目标制动再生轮端扭矩ESC_RBS_TargetRegenWhlTrq后，触发制动能量回收，并将实际轮端制动再生扭矩EMS13_N_ActualBrRegenTrqWhl发给WCBS。该扭矩为考虑电机、电池、发动机、变速器、分动器等动力、传动系统综合因素后，实际的轮端制动再生扭矩（不考虑动力、传动系的转动惯量）。计算时将变速器输入轴的总负扭矩计算到车轮端。若K0离合器闭合，则该扭矩是发动机+电机的负扭矩，考虑传动系的效率、速比等所有因素，计算到轮端的扭矩值。若K0打开，则为电机的负扭矩能力，考虑传动系的效率、速比等所有因素，计算到轮端的扭矩值。WCBS只负责对动力系统的目标扭矩提需求，扭矩交互为轮端，并不关注到底动力系统的制动再生扭矩由哪些部分构成。";
+CM_ SG_ 383 EMS13_N_BrRegenTrqWhlMax "1、Maximum Brake Regeneration Torque Wheel
+2、VCU考虑电机、电池、发动机、变速器、分动器等动力、传动系统综合因素后，能实现的最大轮端制动再生扭矩（不考虑动力、传动系的转动惯量）。若K0离合器闭合，则该扭矩是发动机+电机的负扭矩能力，考虑传动系的效率、速比等所有因素，计算到轮端的扭矩值。若K0打开，则为电机的负扭矩能力，考虑传动系的效率、速比等所有因素，计算到轮端的扭矩值。K0从闭合到打开时，该扭矩会相应地ramp（因为发动机的负扭矩能力没有了）。";
+CM_ SG_ 383 EMS13_N_ActualWhlTorque "1、Wheel torque, reduced by drag torque and torque consumption of auxiliary devices, but without inertia correction
+2、VCU将变速器输入端的扭矩计算到车轮端给WCBS。若车辆处于驱动状态，则该扭矩为正值，若处于滑行回收，则其代表滑行回收的实际轮端负扭矩。若处于滑行能量回收过度到制动能量回收的交互并存阶段，则该值表示当前“滑行回收+制动回收”的总和，若处于“制动能量回收阶段”，则该值代表的是制动能量回收值。换挡过程中，该值也会进行实时的计算，但是换挡过程中离合器脱开/滑磨，该值计算精度不高，且换挡过程中制动能量回收退出，WCBS在换挡过程仅仅是监测该值，并不会基于该值做逻辑控制。";
+CM_ SG_ 383 EMS13_N_Checksum "Checksum = (byte0+byte1+byte2+byte3+byte4+byte5+byte 6）and 0xFF";
+CM_ SG_ 384 SAS1_St_SASSensorInformation "SAS Sensor information is valid or not";
+CM_ SG_ 384 SAS1_N_RotationSpeed "The value of rotationspeed";
+CM_ SG_ 384 SAS1_N_SteeringAngle "The value of steeringangle";
+CM_ SG_ 416 EMS1_F_AcceleratorPedal "Describes the condition of the 'EMS1_N_AcceleratorPedal' signal. If the EMS have detected a failure on this signal, the EGAS will be set in limphome and value = unreliable.";
+CM_ SG_ 416 EMS1_F_EngineSpeed "The valid indication of EMS1_N_EngineSpeed.";
+CM_ SG_ 416 EMS1_F_TargetIdleSpeed "Describes the valid of TargetIdleSpeed";
+CM_ SG_ 416 EMS1_N_EngineSpeed "Actual engine speed, updated every combustion. The engine speed is cleared after the engine is stopped.(E=N)";
+CM_ SG_ 416 EMS1_N_TargetIdleSpeed "Target idle speed of the combustion engine";
+CM_ SG_ 416 EMS1_N_AcceleratorPedal "GasPedalPosition
+融合了ACC请求扭矩之后的油门位置 When cruise is active the pedal position is calculated depending on engine load.
+Calculated every 5 ms.";
+CM_ SG_ 418 EMS8_N_ActualTorque "Actual engine Flywheel torque";
+CM_ SG_ 418 EMS8_F_ActualTorque "Describes the condition of the 'Actual torque' signal.";
+CM_ SG_ 418 EMS8_F_DriverReqTorque_TCU "When the value of the signal is '0', it means EMS8_N_DriverReqTorque_TCU is reliable.";
+CM_ SG_ 418 EMS8_F_ActualTorqueNoTCU "Describes the condition of the 'EMS8_N_ActualTorqueNoTCU' signal.";
+CM_ SG_ 418 EMS8_N_DriverReqTorque_TCU "Driver expected engine Flywheel torque , considering all external torque modifications but without consideration of 'TCM1_N_Shorttermtorque(TCU shift torque request )'";
+CM_ SG_ 418 EMS8_F_BSGEstTrqAct "BSG Estimated torque validity";
+CM_ SG_ 418 EMS8_N_ActualTorqueNoTCU "Actual engine Flywheel torque  modified considering all external torque modifications but without consideration of TCU request signal “TCM1_N_Shorttermtorque(TCU shift torque request )”.";
+CM_ SG_ 418 EMS8_N_BSGEstTrqAct "BSG Estimated Torque";
+CM_ SG_ 418 EMS8_RollingCounter "Message counter for the message transmitted.
+The transmitter shall update the value of signal RollingCounter each time the message is transmitted, even if no data updated in the message.
+The value of the rolling counter increases according to the sequence such as '0,1,2...15,0,1,2...15', and the initial value will be set to zero once transmission is started.";
+CM_ SG_ 418 EMS8_Checksum "Checksum = (byte0+byte1+byte2+byte3+byte4+byte5+byte6）and 0xFF";
+CM_ SG_ 544 IPC6_N_FuelLevel "The remaining fuel level (%).
+E=0.39215*N";
+CM_ SG_ 544 IPC6_St_FuelLevelSensor "the status of fuelLevelSensor";
+CM_ SG_ 544 IPC6_N_VehicleSpeedIndi "Vehicle Speed indication from IPC";
+CM_ SG_ 562 EDS1_St_RearEDSLck "EDS Rear ELock Status";
+CM_ SG_ 562 EDS1_St_FrontEDSLck "EDS Front ELock Status";
+CM_ SG_ 640 EMS5_St_WaterInOilTelltale "Water In Fuel Indication Lamp(For 40)
+只是柴油机";
+CM_ SG_ 640 EMS5_F_BrakePedal "The valid indication of EMS5_St_BrakePedal
+This signal is a quality signal connected to EMS5_St_BrakePedal";
+CM_ SG_ 640 EMS5_St_FuelQuality "indicates Fuel Quality";
+CM_ SG_ 640 EMS5_St_BrakePedal "indicates that Brake Pedal is pressed";
+CM_ SG_ 640 EMS5_St_FuelCut "fuel Cut";
+CM_ SG_ 640 EMS5_St_Cruise "For AT
+Cruise control engaged.
+It is used by TCU for cruise function.";
+CM_ SG_ 640 EMS5_St_LimpHome "Engine Management in limp home, if any parts is in limphome";
+CM_ SG_ 640 EMS5_St_MILTelltale "Lights up the  engine Mil Lamp.";
+CM_ SG_ 640 EMS5_St_CruiseMainSw "Cruise  main Switch";
+CM_ SG_ 640 EMS5_St_OilPressureTelltale "Lights up the oil pressure warning lamp.(For 40)
+只有柴油机用";
+CM_ SG_ 640 EMS5_St_SVSTelltale "Lights up the check engine lamp.";
+CM_ SG_ 640 EMS5_St_EngineStart "Indicates if the engine has started successfully.";
+CM_ SG_ 640 EMS5_St_GlowTelltale "Glow Time Indication lamp(For 40)";
+CM_ SG_ 640 EMS5_St_EngineCranking "when the starter pulls the engine around，it comes from the variable “CoEng_st”";
+CM_ SG_ 640 EMS5_St_EngineRunning "Indicates that the engine is running";
+CM_ SG_ 640 EMS5_St_GPFReIndic "The indicator of GPF regeneration.（国六）";
+CM_ SG_ 657 APA2_St_APAStatus "APA status 
+自动泊车状态";
+CM_ SG_ 657 APA2_St_Request "APA控制请求
+APA2_St_Request";
+CM_ SG_ 784 EPB1_St_WarningLamp "The status of EPB warning lamp status.";
+CM_ SG_ 784 EPB1_St_ParkLamp "The status of EPB Park lamp status.";
+CM_ SG_ 784 EPB1_St_ActuatorStR "The status of right Moc. 
+1.EPB状态值为5时，为执行机构故障，EPB1_St_EARFail为0x1；
+2.当EPB1_St_DynamicApply：
+为0x1: ECD request active时，该信号发0x2
+为0x2 RWUactive,该信号发0x7Adjust
+为0x3 Degrade Apply，该信号发0x6Hold";
+CM_ SG_ 784 EPB1_St_ActuatorStL "The status of left Moc. 
+1.EPB状态值为5时，为执行机构故障，EPB1_St_EARFail为0x1:error in EPB (no external apply allowed)；
+2.当EPB1_St_DynamicApply：
+为0x1: ECD request active时，该信号发0x2
+为0x2 RWUactive,该信号发0x7Adjust
+为0x3 Degrade Apply，该信号发0x6Hold";
+CM_ SG_ 784 EPB1_St_4LParkingWarning "当为0x1:Warning时，仪表需要文字提示“请挂入空挡或P档。AT车型在4L模式下挂前进挡或倒挡时，驱动力过大，存在损坏EPB卡钳的风险，需要提醒驾驶员切换到空挡或P档";
+CM_ SG_ 784 EPB1_Disp_WithoutBrake "按下EPB按钮，仍然无法释放，灯亮，文字提示“同时踩下制动踏板”；";
+CM_ SG_ 784 EPB1_Disp_WithoutSeatBelt "EPB上锁且汽车起步时未系安全带，EPB无法自动释放，文字提示“请系安全带”；";
+CM_ SG_ 784 EPB1_St_EPBSwitch "The status of EPB switch.";
+CM_ SG_ 784 EPB1_St_NoParkingWarning "No Parking Warning after engine shutdown
+熄火后未驻车的提示信号:只要检测到两个及以上两个轮速传感器失效（无论上电还是熄火，无论拉不拉EPB开关），发0x1：文字提示“如驻车，请熄火后长拉EPB开关”否则发0x0：无文字提示。";
+CM_ SG_ 784 EPB1_St_DynamicApply "The status of dynamic apply.
+1.EPB执行动态制动的工作模式，可用于TMM  Open Request，CC Cancel  Request的请求冗余判断；
+2.0代表动态制动没有被激活；1代表动态制动联动；2代表后轮防抱死制动；3代表降级制动； ECD即动态制动联动，ESP执行的四轮动态制动；而RWU为EPB执行的后轮防抱死动态制动；
+无四驱控制模块";
+CM_ SG_ 785 WCBS_ESP5_F_VehicleSpeed "to indicate whether VehicleSpeed signal is invalid.";
+CM_ SG_ 792 WCBS_ESP1_St_ABSActive "ABS controlling status.
+For WCBS:ABSActive";
+CM_ SG_ 792 WCBS_ESP1_St_TCSActive "TCS controlling status.
+For WCBS:TCSActive";
+CM_ SG_ 792 WCBS_ESP1_Cmd_EPBPark "请求EPB驻车命令. (For EPB)";
+CM_ SG_ 792 WCBS_ESP1_St_AutoHoldTelltale "Auto hold功能标志位. (For EPB)";
+CM_ SG_ 792 WCBS_ESP1_St_AutoHold "Auto hold功能激活状态. (For EPB)";
+CM_ SG_ 792 WCBS_ESP1_St_ESPTCSOffTelltale "Signal indicates to light up 'TCS/ESP off' lamp.
+-manual switch off of ESP function (on/off switch).
+For WCBS:ESC_ESCOffSwitch";
+CM_ SG_ 792 WCBS_ESP1_St_ESPFailureTelltale "Signal indicates failure monitoring of ESP function
+For WCBS:TCS失效and ESC失效
+是指TCS和VDC任一个失效";
+CM_ SG_ 792 WCBS_ESP1_St_HDCTelltale "Signal indicates to light up HDC lamp";
+CM_ SG_ 792 WCBS_ESP1_St_ESPTCSActiveTelltal "Signal indicates to light up 'TCS/ESP active' lamp. Is used to indicate to the driver that the system is currently active.";
+CM_ SG_ 792 WCBS_ESP1_St_EBDTelltale "Signal indicates to light up EBD lamp
+For WCBS:EBD失效";
+CM_ SG_ 792 WCBS_ESP1_St_ABSTelltale "Signal indicates to light up ABS lamp
+For WCBS:ABS失效";
+CM_ SG_ 792 WCBS_ESP1_N_OdometerRoll "Odometer rolling count 1 pulse/bit. The value shall be set to zero at every ignition off and if the counter reach max value it starts from zero again.（ E=N）";
+CM_ SG_ 792 WCBS_ESP1_St_BrakeFluidW "Brake Fluid Warning";
+CM_ SG_ 800 TCCU1_St_4H4L "current 4WD  Status，2WD-4WD-4WD Low mode activation";
+CM_ SG_ 800 TCCU1_St_Fault "4WD ECU faults code";
+CM_ SG_ 800 TCCU1_St_ShiftCondition "4WD shift condition（TCCU）";
+CM_ SG_ 847 BMS11_RollingCounter "Message counter for the message transmitted.
+The transmitter shall update the value of signal RollingCounter each time the message is transmitted, even if no data updated in the message.
+The value of the rolling counter increases according to the sequence such as '0,1,2...15,0,1,2...15', and the initial value will be set to zero once transmission is started.";
+CM_ SG_ 847 BMS11_St_PackRelay "电池包内继电器状态
+Relay_State";
+CM_ SG_ 847 BMS11_St_CBalOpen "均衡开启标志
+CBAL_en_b";
+CM_ SG_ 847 BMS11_St_CANBusoff "CAN bus-off故障
+CAN_Busoff_actv_b";
+CM_ SG_ 847 BMS11_St_ECUCommFault "BMS接收ECU报文通信超时
+ECU_Comm_Fault_actv_b";
+CM_ SG_ 847 BMS11_St_HSDFault "HSD芯片故障
+HSD_Fault_actv_b";
+CM_ SG_ 847 BMS11_St_AFECommFault "AFE芯片通信故障
+AFE_Comm_Fault_actv_b";
+CM_ SG_ 847 BMS11_St_Ocp "过流故障
+Ocp_actv_b";
+CM_ SG_ 847 BMS11_St_OverTemp "高温故障
+Otp_actv_b";
+CM_ SG_ 847 BMS11_St_PackUvp "总电压欠压
+PACK_Uvp_actv_b";
+CM_ SG_ 847 BMS11_St_PackOvp "总电压过压
+PACK_0vp_actv_b";
+CM_ SG_ 847 BMS11_St_CellLUvp "单体欠压
+CELL_Uvp_actv_b";
+CM_ SG_ 847 BMS11_St_CellLOvp "单体过压
+CELL_Ovp_actv_b";
+CM_ SG_ 847 BMS11_St_PwrUvp "12V供电欠压
+Pwr_Uvp_actv_b";
+CM_ SG_ 847 BMS11_St_PwrOvp "12V供电过压
+Pwr_Ovp_actv_b";
+CM_ SG_ 847 BMS11_St_PackTempSampFault "温度采样回路故障
+PACK_T_Samplingfault_actv_b";
+CM_ SG_ 847 BMS11_St_InstCurrSampFault "电流采样回路故障
+Inst_I_Samplingfault_actv_b";
+CM_ SG_ 847 BMS11_St_CellVolSampFault "单体电压采样回路故障
+CELL_U_Samplingfault_actv_b";
+CM_ SG_ 847 BMS11_St_StackVolSampFault "总电压采样回路故障
+Stack_U_Samplingfault_actv_b";
+CM_ SG_ 847 BMS11_St_CellDpDschrgUnr "单体严重欠压,为4级不可恢复故障
+CELL_Deep_Dschrg_b
+Cell Deep Discharge Unrecoverable";
+CM_ SG_ 847 BMS11_St_CellDeepChrg "单体严重过压
+CELL_Deep_Chrg_b";
+CM_ SG_ 847 BMS11_St_PackDeepDschrg "总电压严重欠压
+PACK_Deep_Dschrg_b";
+CM_ SG_ 847 BMS11_St_PackDeepChrg "总电压严重过压
+PACK_Deep_Chrg_b";
+CM_ SG_ 847 BMS11_St_CbClosefail "电池包寿命终了和继电器开路无法闭合
+(PT1新增：SOH=40%上报电池包寿命终了)
+DTC_cb_closefail_actv_b";
+CM_ SG_ 847 BMS11_St_EqualizeFail "均衡失败
+DTC_equalize_fail_actv_b";
+CM_ SG_ 847 BMS11_St_CbStuck "继电器粘连
+DTC_cb_stuck_actv_b";
+CM_ SG_ 847 BMS11_St_CbUnexpectedOpen "继电器异常断开
+DTC_cb_unexpected_open_actv_b";
+CM_ SG_ 847 BMS11_St_CellDpDschrgCbOpen "单体严重欠压，为3级切断继电器故障
+CELL_xx_Deep_Dschrg_b
+Cell Deep Discharge  Cb open";
+CM_ SG_ 847 BMS11_St_Sotp "电芯严重过过温
+Sotp_actv_b";
+CM_ SG_ 847 BMS11_St_SOCHighop "soc过高
+SOC_High_op";
+CM_ SG_ 847 BMS11_St_SOCHighup "soc过低
+SOC_High_up";
+CM_ SG_ 847 BMS11_St_CbLife "继电器寿命告警:                                     
+>90%阈值，cb_Lifewarning，无限制无法恢复                                        >100%阈值， cb_Lifend ，无法恢复，返厂     
+Cb_Life_State";
+CM_ SG_ 848 SDM1_St_AirbagWarningLamp "Set if there is an error in the airbag.AirBag Fault Status";
+CM_ SG_ 848 SDM1_St_RRSeatbelt "Rear Row Right  Seatbelt Buckle Switch Status";
+CM_ SG_ 848 SDM1_St_RMSeatbelt "Rear Middle Buckle Switch Status";
+CM_ SG_ 848 SDM1_St_RLSeatbelt "RearRow Left  Seatbelt Buckle Switch Status";
+CM_ SG_ 848 SDM1_St_PASeatbelt "Warning Status for Passenger occupied with Passenger Seatbelt Buckle Switch  Unbuckled";
+CM_ SG_ 848 SDM1_St_DRSeatbelt "Driver Seatbelt Buckle Switch Status";
+CM_ SG_ 848 SDM1_St_AirbagDeployed "Set after the airbag has been deployed.This signal's transmit type is on event.Within 30ms after deployed crash, the signal will send every 20ms for 10 times. And then the signal will be sent every 100ms with the 0x0 in this ignition cycle.
+ the signal will be sent every 100ms with the 0x0 in next ignition cycle.
+Signal value other than 00 means crash happened.（接收该信号的控制器请按照此执行）";
+CM_ SG_ 866 BCM4_St_SSCUSsPosnVRAPP "Report Sunshade position SSCU";
+CM_ SG_ 866 BCM4_St_SunRPosn "Report sunroof position";
+CM_ SG_ 880 EMS3_F_AirFlowLoad "The valid indication of EMS3_N_AirflowLoad";
+CM_ SG_ 880 EMS3_F_TurboPressure "The valid indication of EMS3_N_TurboPressure";
+CM_ SG_ 880 EMS3_F_FuelInjected "The valid indication of EMS3_N_FuelInjected";
+CM_ SG_ 880 EMS3_N_FuleInjected "Consumption in liter used from ignition on. If the consumption is more than 65,535 mililitre will the value start from zero again. The value will reset to zero when IGON is operated again.If the time interval between IG OFF and IGON is so small(less than 10s,) that this value is allowed to remain previous.
+E=0.001N";
+CM_ SG_ 880 EMS3_N_TurboPressure "Turbo pressure 
+if  >255% then send 255";
+CM_ SG_ 880 EMS3_N_AirFlowLoad "for spark ignition engines, typically an indication of the current airflow divided by peak airflow at wide open throttle as a function of rpm, where airflow is corrected for altitude and ambient temperature。
+(current airflow/peak airflow sea level)*(BARO @sea level /BARO)*100 %
+E=N*100/255
+Note:At engine off and ignition on ,the Load =0%";
+CM_ SG_ 885 AC2_St_Blowerlevel "Blowerlevel,风量级别";
+CM_ SG_ 885 AC2_St_BlowerMode "BlowerMode吹风模式";
+CM_ SG_ 885 AC2_St_PM25 "PM2.5 Status";
+CM_ SG_ 885 AC2_St_FrontDef "Front defrost Status";
+CM_ SG_ 885 AC2_St_ACSys "this signal indicate if the AC system is ON";
+CM_ SG_ 885 AC2_St_AutoDisplay "AC AUTO display Status";
+CM_ SG_ 885 AC2_St_ACReq "AC request signal
+the switch signal";
+CM_ SG_ 885 AC2_St_SYNCDisplay "Dual zone display（SYNC）";
+CM_ SG_ 885 AC2_Cmd_RBlowerMode "Rear blower Mode后排吹风模式控制(reserve)";
+CM_ SG_ 885 AC2_N_DriTempDisp "Driver throttle temperature display";
+CM_ SG_ 885 AC2_St_RemoteStartResponse "Represents whether the air conditioner is ready to enter remote start mode";
+CM_ SG_ 885 AC2_St_RearDef "rear defrost Status,sending according to BCM1_St_RWindowDeforst
+(reserve)60";
+CM_ SG_ 885 AC2_St_DispRequest "request EHC display";
+CM_ SG_ 885 AC2_N_PaTempDisp "Passenger throttle temperature display";
+CM_ SG_ 885 AC2_N_PM25 "PM2.5显示值信号";
+CM_ SG_ 885 AC2_St_Recir "Recirculate status";
+CM_ SG_ 885 AC2_St_AirPuriAndAutoLink "空气净化与AUTO联动信号
+Air purification and auto linkage Switch";
+CM_ SG_ 885 AC2_St_UnlockFreshAirSwitch "解锁新风开关信号
+Switch used to Unlock the fresh air";
+CM_ SG_ 885 AC2_St_AnionSwitch "负离子开关信号";
+CM_ SG_ 885 AC2_St_AQSSwitch "AQS开关信号";
+CM_ SG_ 928 EMS2_F_CrsCtrlSetSpd "The valid indication of EMS cruise control set speed";
+CM_ SG_ 928 EMS2_N_CrsCtrlSetSpd "EMS cruise control set speed.";
+CM_ SG_ 928 EMS2_F_ThrottleAngle "The valid indication of EMS2_N_ThrottleAngle";
+CM_ SG_ 928 EMS2_N_ThrottleAngle "throttle angle （E=N*100/255）";
+CM_ SG_ 992 TCM2_F_ActuralGear "The valid indication of TCM2_N_ActuralGear";
+CM_ SG_ 992 TCM2_N_TargetGear "Describes the information of target gear.";
+CM_ SG_ 992 TCM2_St_LimpHome "TCU in Limp Home";
+CM_ SG_ 992 TCM2_St_GearboxTelltale "Check gearbox lamp on dashboard";
+CM_ SG_ 992 TCM2_N_ActuralGear "Describes the information of current engaged gear.";
+CM_ SG_ 1173 WDDC1_N_LWadeDeepth "Wade deepth
+当前左侧涉水深度,WDDC自己做判断，不建议其它系统收";
+CM_ SG_ 1173 WDDC1_N_RWadeDeepth "Wade deepth
+当前右侧涉水深度,WDDC自己做判断，不建议其它系统收";
+CM_ SG_ 1173 WDDC1_N_MaxWadeDeepth "最大涉水深度（这是定值）";
+CM_ SG_ 1173 WDDC1_St_LWDSensorFault "左水深传感器故障状态，用于仪表报警";
+CM_ SG_ 1173 WDDC1_W_WDOverLimit "涉水深度超限报警，4种状态：无警报、安全区（预留）、警示区(70cm＞H≥55cm)、危险区(H≥70cm)，列个区间";
+CM_ SG_ 1173 WDDC1_St_WadeMode "wade enable
+涉水模式打开状态
+涉水模式打开状态（待机状态，系统已上电、即水深检测系统关闭）
+0：关闭
+1：打开";
+CM_ SG_ 1173 WDDC1_St_ReadyATSMode "Wade ready for ATS
+可以响应ATS模式请求（水深检查系统是否满足开启条件）";
+CM_ SG_ 1173 WDDC1_St_RWDSensorFault "右水深传感器故障状态，用于仪表报警";
+CM_ SG_ 1184 BCM1_St_RWindowDefrost "The status of rear windows defrost
+Dignosis on external relay.";
+CM_ SG_ 1184 BCM1_St_HighBeam "The status of high lamp,reform the IPC there is fault or not about all high lamp
+Reserved";
+CM_ SG_ 1184 BCM1_Cmd_Horn "The Command of horn";
+CM_ SG_ 1184 BCM1_Cmd_PositionLamp "The Command of Position Lamp,BCM  judge all stations that need light the positon lamp on and send this command in CAN bus. Light the position lamp on in the IPC";
+CM_ SG_ 1184 BCM1_St_AntiThelfIndication "Anti-thelf indication status";
+CM_ SG_ 1184 BCM1_St_PositionLamp "The status of position lamp,reform the IPC there is fault or not about all position lamp";
+CM_ SG_ 1184 BCM1_St_RightTurnLamp "The status of right turn lamp,reform the IPC there is fault or not about the lamp";
+CM_ SG_ 1184 BCM1_Cmd_RightTurnLamp "The Command of Right turn Lamp,BCM  judge when the Lamp is fault that need light the lamp on as the correct HZ and send this command in CAN bus. Light the lamp on in the IPC";
+CM_ SG_ 1184 BCM1_St_LeftTurnLamp "The status of left turn lamp,reform the IPC there is fault or not about the lamp";
+CM_ SG_ 1184 BCM1_Cmd_LeftTurnLamp "The Command of Left turn Lamp,BCM  judge when the Lamp is fault that need light the lamp on as the correct HZ and send this command in CAN bus. Light the lamp on in the IPC";
+CM_ SG_ 1184 BCM1_St_Hood "The status of hood";
+CM_ SG_ 1184 BCM1_St_TrunkDoor "The status of trunk Door switch";
+CM_ SG_ 1184 BCM1_St_RRDoor "The status of the rear right door switch";
+CM_ SG_ 1184 BCM1_St_LRDoor "The status of the rear left door switch";
+CM_ SG_ 1184 BCM1_St_PassengerDoor "The status of Passenger door switch";
+CM_ SG_ 1184 BCM1_St_DriverDoor "The status of Driver door switch";
+CM_ SG_ 1184 BCM1_St_PasDoorLock "The status of the Passenge door lock switch";
+CM_ SG_ 1184 BCM1_St_LFDoorLock "The status of the driver door lock switch";
+CM_ SG_ 1184 BCM1_Sw_ReverseGear "The status of reverse gear switch";
+CM_ SG_ 1184 BCM1_Sw_Brake "The status of Brake switch";
+CM_ SG_ 1184 BCM1_Cmd_LowBeam "The Command of Low beam,BCM  judge all stations that need light the low beam on and send this command in CAN bus. Light the low beam on in the IPC";
+CM_ SG_ 1184 BCM1_Cmd_HighBeam "The Command of High Lamp,BCM  judge all stations that need light the high lamp on and send this command in CAN bus. Light the High lamp on in the IPC";
+CM_ SG_ 1184 BCM1_St_Trunklock "尾门锁状态";
+CM_ SG_ 1184 BCM1_St_LowBeam "The status of low beam,reform the IPC there is fault or not about all low beam";
+CM_ SG_ 1184 BCM1_St_DRL "The status of daytime running lamp";
+CM_ SG_ 1184 BCM1_St_BrakeFluidLowWarning "The warning status of brake fluid low 
+(Reserved)";
+CM_ SG_ 1184 BCM1_Cmd_CentralUnlock "Commad. request to unlock all the door";
+CM_ SG_ 1184 BCM1_Cmd_CentralLock "Commad. request to lock all the door";
+CM_ SG_ 1184 BCM1_St_BrakeLamp "The status of brake lamp";
+CM_ SG_ 1184 BCM1_St_Reverselamp "The status of reverse lamp";
+CM_ SG_ 1184 BCM1_St_RearFoglamp "The status of RearFoglamp,reform the IPC there is fault or not about all RearFoglamp";
+CM_ SG_ 1184 BCM1_Cmd_RearFoglamp "The Command of RearFoglamp,BCM  judge all stations that need light the RearFoglamp on and send this command in CAN bus. Light the RearFoglamp on in the IPC";
+CM_ SG_ 1184 BCM1_St_FrontFoglamp "The status of FrontFoglamp,reform the IPC there is fault or not about all FrontFoglamp";
+CM_ SG_ 1184 BCM1_Cmd_FrontFoglamp "The Command of FrontFoglamp,BCM  judge all stations that need light the FrontFoglamp on and send this command in CAN bus. Light the FrontFoglamp on in the IPC";
+CM_ SG_ 1203 BCM2_Cmd_TrunkUnLock "尾门开锁";
+CM_ SG_ 1248 TCM5_St_TCUDriverWarnings0 "Gearbox temperature too high! (Temperature thresholds calibrateable according to the hotmode strategy)
+Invalid Value(Hex)无效值:0x1";
+CM_ SG_ 1248 TCM5_St_Shiftpattern "Shift pattern is used to calibration";
+CM_ SG_ 1248 TCM5_St_EngStartEnable "Engine Start Enable signal. If the lever position is in P or N, TMS will send it to allow engine start. If in D or R, the start is not allowed";
+CM_ SG_ 1264 ORIM1_F_AtmosphericPressure "Atmospheric Pressure values are valid flag";
+CM_ SG_ 1264 ORIM1_St_CalibrationCompassZeroE "ORIM notification IPC calibration signal has ended";
+CM_ SG_ 1264 ORIM1_St_CalibrationTiltingAngle "ORIM notification IPC calibration signal has ended";
+CM_ SG_ 1264 ORIM1_St_CalibrationGyroZeroEnd "ORIM notification IPC calibration Gyro signal has ended";
+CM_ SG_ 1264 ORIM1_F_CompassDirection "Direction values are valid flag";
+CM_ SG_ 1264 ORIM1_St_CompassDirection "Compass pointing direction, comprising: north, northeast, east, southeast, south, southwest, west, northwest total of eight directions.";
+CM_ SG_ 1264 ORIM1_N_AtmosphericPressure "Atmospheric pressure range";
+CM_ SG_ 1264 ORIM1_F_AltitudeHeigh "ORIM1_N_AltitudeHeight values are valid flag";
+CM_ SG_ 1264 ORIM1_F_AboutTiltingAngle "About Tilting Angle values are valid flag";
+CM_ SG_ 1264 ORIM1_F_AroundThePitchAngle "Around the Pitch Angle values are valid flag";
+CM_ SG_ 1264 ORIM1_N_AltitudeHeight "Altitude height";
+CM_ SG_ 1264 ORIM1_N_CompassAngleSignal "Compass angle signal, precision 1 °.";
+CM_ SG_ 1264 ORIM1_F_CompassAngleSignal "Direction CompassAngleSignal values are valid flag";
+CM_ SG_ 1264 ORIM1_N_AroundThePitchAngle "Around the pitch angle range: ± 40 °, precision 1 °.";
+CM_ SG_ 1264 ORIM1_N_AboutTiltingAngle "About tilting angle range: ± 60 °, precision 1 °.";
+CM_ SG_ 1297 ATS1_St_TCCUSwitch "ATS request TCCU Switch.
+The TCCU requested by ATS can be used for switch display";
+CM_ SG_ 1297 ATS1_RollingCounter "Message counter for the message transmitted.
+The transmitter shall update the value of signal RollingCounter each time the message is transmitted, even if no data updated in the message.
+The value of the rolling counter increases according to the sequence such as '0,1,2...15,0,1,2...15', and the initial value will be set to zero once transmission is started.";
+CM_ SG_ 1297 ATS1_St_ConfirmedMode "ATS Confirmed Mode";
+CM_ SG_ 1297 ATS1_Cmd_RequestedMode "ATS Requested Mode";
+CM_ SG_ 1297 ATS1_W_Hint6 "EDS system failure, this mode is not supported";
+CM_ SG_ 1297 ATS1_W_Hint5 "TCCU system failure, this mode is not supported";
+CM_ SG_ 1297 ATS1_W_Hint4 "WDDC system failure, this mode is not supported";
+CM_ SG_ 1297 ATS1_W_Hint3 "TCM system failure, this mode is not supported";
+CM_ SG_ 1297 ATS1_W_Hint2 "EMS system failure, this mode is not supported";
+CM_ SG_ 1297 ATS1_W_Hint1 "WCBS system failure, this mode is not supported";
+CM_ SG_ 1297 ATS1_W_Hint14 "The EDS is locked and does not support the current mode";
+CM_ SG_ 1297 ATS1_W_Hint13 "EDS Lock system fault, poor off-road performance, please drive carefully";
+CM_ SG_ 1297 ATS1_W_Hint12 "Unlock the EDS Lock and exit rock mode";
+CM_ SG_ 1297 ATS1_W_Hint11 "Please lock the EDS Front and Rear ELock Status";
+CM_ SG_ 1297 ATS1_W_Hint10 "Please lock the EDS Rear ELock Status";
+CM_ SG_ 1297 ATS1_W_Hint9 "The EDS is locked, so the mode selection is not supported";
+CM_ SG_ 1297 ATS1_W_Hint8 "The communication of 4WD switch is abnormal, unable to switch the 4WD gear";
+CM_ SG_ 1297 ATS1_W_Hint7 "The communication of ATS mode switch is abnormal, and it enters comfort mode";
+CM_ SG_ 1297 ATS1_W_Hint22 "Pavement detected, please use 4WD with caution";
+CM_ SG_ 1297 ATS1_W_Hint21 "Pavement detected, please release EDS";
+CM_ SG_ 1297 ATS1_W_Hint20 "Detection of off-road Road, it is recommended to engage 4WD";
+CM_ SG_ 1297 ATS1_W_Hint19 "This mode is not supported in 4WD mode";
+CM_ SG_ 1297 ATS1_W_Hint18 "The TCCU case is in gear 2H";
+CM_ SG_ 1297 ATS1_W_Hint17 "Please put the TCCU case into 2H gear";
+CM_ SG_ 1297 ATS1_W_Hint16 "Please put the TCCU case into 4L gear";
+CM_ SG_ 1297 ATS1_W_Hint15 "Rock mode disable TCCU case high range";
+CM_ SG_ 1297 ATS1_W_Hint27 "2H is not supported in off-road mode";
+CM_ SG_ 1297 ATS1_W_Hint26 "This mode does not support 4WD";
+CM_ SG_ 1297 ATS1_W_Hint25 "The transfer gears are in 4H";
+CM_ SG_ 1297 ATS1_W_Hint24 "When driving in sand, it is recommended to adjust the tire pressure to 1.0-1.5bar";
+CM_ SG_ 1297 ATS1_W_Hint23 "If trapped car is detected, try to hook in 4L to get out of trouble";
+CM_ SG_ 1297 ATS1_Checksum "Checksum = (byte0+byte1+…+byte 6）and 0xFF";
+CM_ SG_ 1313 IPC4_N_AverFuelConsum "The value of Average fuel consumption";
+CM_ SG_ 1313 IPC4_N_ResiFuel "The value of Residual oil";
+CM_ SG_ 1313 IPC4_N_InstanFuelConsum "The value of Instantaneous fuel consumption
+Vehicle speed≤5Km/h，unit is L/h；
+Vehicle speed＞5Km/h，unit is L/100Km。";
+CM_ SG_ 1313 IPC4_N_EnduranceMileage "EnduranceMileage";
+CM_ SG_ 1313 IPC4_N_OdoRemain "Remaining maintenance mileage";
+CM_ SG_ 1328 AC1_Sw_Request "AC request，this signal indicate   AC Compressor close or open
+(reserve)";
+CM_ SG_ 1328 AC1_F_ACTemperature "The Valid of AC temperature in evaporator";
+CM_ SG_ 1328 AC1_F_IncarTemp "The Valid of AC1_N_IncarTemp";
+CM_ SG_ 1328 AC1_N_ACTemperature "Temperature in the evaporator, does not generate event.";
+CM_ SG_ 1328 AC1_N_IncarTemp "Incar temperature";
+CM_ SG_ 1344 TPMS_St_TirePosition "Tire position";
+CM_ SG_ 1344 TPMS_St_Signal "Indentify this frame information is newly get  or reserved last time.current each tire information";
+CM_ SG_ 1344 TPMS_N_LFPressure "Left front tire pressure";
+CM_ SG_ 1344 TPMS_N_RFPressure "Right front tire pressure";
+CM_ SG_ 1344 TPMS_N_RRPressure "Right rear tire pressure";
+CM_ SG_ 1344 TPMS_N_LRPressure "Left rear tire pressure";
+CM_ SG_ 1344 TPMS_N_TireTemperature "Tire temperature";
+CM_ SG_ 1344 TPMS_St_RFPWarning "RF tire pressure warning status";
+CM_ SG_ 1344 TPMS_St_LFPWarning "LF tire pressure warning status";
+CM_ SG_ 1344 TPMS_St_SystemWarning "System warning";
+CM_ SG_ 1344 TPMS_St_TWarning "Temperature warning";
+CM_ SG_ 1344 TPMS_St_LRPWarning "LR tire pressure warning status";
+CM_ SG_ 1344 TPMS_St_RRPWarning "RR tire pressure warning status";
+CM_ SG_ 1360 DSM1_St_DriSeatVentilation "The Light of Driver Seat Ventilation";
+CM_ SG_ 1360 DSM1_St_DriSeatHeat "The Light of Driver Seat Heat";
+CM_ SG_ 1360 DSM1_St_PasSeatVentilation "The Light of Passage Seat Ventilation";
+CM_ SG_ 1360 DSM1_St_PasSeatHeat "The Light of Passage Seat Heat";
+CM_ SG_ 1377 BCM7_St_SecondRSeatVentilation "The Light of Second row Right Seat Heat（Reserved）";
+CM_ SG_ 1377 BCM7_St_SecondLSeatVentilation "The Light of Second row Left SeatVentilation（Reserved）";
+CM_ SG_ 1377 BCM7_St_SecondRSeatHeat "The Light of Second row Right Seat Heat";
+CM_ SG_ 1377 BCM7_St_SecondLSeatHeat "The Light of Second row Left Seat Heat";
+CM_ SG_ 1392 CAPE1_St_REMOTEStRes "The value of it will set '1' when ECU accept to enter remote start mode.
+This signal will change before 'REMOTE_START_STATUS' changing";
+CM_ SG_ 1392 CAPE1_St_PowerMode "Vehicle power mode
+This signal indicates the inner power mode of PDM";
+CM_ SG_ 1392 CAPE1_F_PowerMode "Vehicle power mode validity
+This signal indicates if power mode signal is valid or not";
+CM_ SG_ 1392 CAPE1_St_RemoteStart "Remote start status from PEPS. If the value is 0x0. the car is not in remote start mode";
+CM_ SG_ 1392 CAPE1_St_StRelayHSD "PEPS send this signal to EMS if start stop function is available. Only if EMS2_F_StartStopREQ=1&EMS2_St_StartStopREQ_on=1EMS2_St_StartStopREQ_off=0,the PEPS can response the EMS Start/Stop fuction,and meantime pull down the high side of starter relay,and meantime feedback CAPE1_St_StRelayHSD=2 to ECU.";
+CM_ SG_ 1393 ESCL1_St_TextRotateSteeringWheel "The ESCL sets this signal when it was unable to unlock the Steering wheel after the first 3 attempts
+IPC Info:unable to unlock the Steering wheel";
+CM_ SG_ 1393 ESCL1_St_TextGarage "The ESCL sets this signal when it has detected a failure which leads to a redundancy loss
+IPC Info:steering column lock failure, visit repair shop";
+CM_ SG_ 1393 ESCL1_St_TextDeect "The ESCL sets this signal when it has detected a defect failure 
+IPC Info:Steering column internal failure , stop vehicle";
+CM_ SG_ 1393 ESCL1_St_TextSteeringNotUnlock "The ESCL sets this signal when it was unable to unlock the Steering wheel
+IPC Info:unable to unlock the Steering wheel
+（Reserved）";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN7 "IPC display message request
+This is request signal for IPC display message:KEY IN REMINDER";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN4 "IPC display message request
+This is request signal for IPC display message:P/N gear for starting";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN2 "IPC display message request
+This is request signal for IPC display message:No smart key";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN1 "IPC display message request
+This is request signal for IPC display message red alarm(IPC display message: PEPS system error)";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN0 "IPC display message request
+This is request signal for IPC display message  yellow alarm(IPC display message: PEPS system error)";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN10 "IPC display message request
+This is request signal for IPC display message:Immo authenticaton fail";
+CM_ SG_ 1408 CAPE2_St_MiuMsgReqN9 "IPC display message request
+This is request signal for IPC display message:Key battery low";
+CM_ SG_ 1424 PAS1_F_FLCMalfunction "valid of Front LeftCenter RadarMalfunction";
+CM_ SG_ 1424 PAS1_F_FLMalfunction "valid of Front Left RadarMalfunction";
+CM_ SG_ 1424 PAS1_St_FLC "Front LeftCenter Radar distance detect level";
+CM_ SG_ 1424 PAS1_St_FL "Front Left Radar distance detect level";
+CM_ SG_ 1424 PAS1_F_FRMalfunction "valid of Front Right RadarMalfunction";
+CM_ SG_ 1424 PAS1_F_FRCMalfunction "valid of Front RightCenter RadarMalfunction";
+CM_ SG_ 1424 PAS1_St_FR "Front Right Radar distance detect level";
+CM_ SG_ 1424 PAS1_St_FRC "Front RightCenter Radar distance detect level";
+CM_ SG_ 1424 PAS1_F_RLCMalfunction "valid of Rear LeftCenter RadarMalfunction";
+CM_ SG_ 1424 PAS1_F_RLMalfunction "valid of Rear Left RadarMalfunction";
+CM_ SG_ 1424 PAS1_St_RLC "Rear LeftCenter Radar distance detect level";
+CM_ SG_ 1424 PAS1_St_RL "Rear Left Radar distance detect level";
+CM_ SG_ 1424 PAS1_F_RRMalfunction "valid of Rear Right RadarMalfunction";
+CM_ SG_ 1424 PAS1_F_RRCMalfunction "valid of Rear RightCenter RadarMalfunction";
+CM_ SG_ 1424 PAS1_St_RR "Rear Right Radar distance detect level";
+CM_ SG_ 1424 PAS1_St_RRC "Rear RightCenter Radar distance detect level";
+CM_ SG_ 1424 PAS1_St_SpeakerWarn "Status of RadarWarning for EHC";
+CM_ SG_ 1424 PAS1_St_WorkMODE "operation mode of parking distance control 
+倒车雷达工作模式";
+CM_ SG_ 1424 PAS1_St_ReverseWarnTone "status of ReverseWarnTone
+PAS_Buzzer_Alarm_Pattern";
+CM_ SG_ 1424 PAS1_St_FPAS "to feedback Front PAS  open or close";
+CM_ SG_ 1425 APA4_St_ParkingType "泊车类型
+Parking_Type
+APA Indication status
+APA2_St_Indication";
+CM_ SG_ 1425 APA4_St_Tracking "循迹状态
+Tracking_Status";
+CM_ SG_ 1425 APA4_St_TrackingFunction "功能状态
+Function_State";
+CM_ SG_ 1425 APA4_St_TrackingRecover "循迹暂停事件
+Tracking_RecoverIndication";
+CM_ SG_ 1425 APA4_St_LanguageSetting "to  Feedback  Language";
+CM_ SG_ 1425 APA4_St_TrackingQuit "循迹终止事件
+Tracking_QuitIndication";
+CM_ SG_ 1425 APA4_St_ParkingOutMode "泊出方式
+Parking_Mode";
+CM_ SG_ 1425 APA4_St_QuitIndication "终止事件
+APA2_St_QuitIndication";
+CM_ SG_ 1425 APA4_St_RecoverINTIndication "暂停事件
+APA2_St_RecoverINTIndication";
+CM_ SG_ 1425 APA4_St_RequestFeedback "握手反馈指令
+TBOX_APA_RequestFeedback";
+CM_ SG_ 1445 EMS12_St_ErrorLevel "The Error level of EMS diagnostic fault";
+CM_ SG_ 1472 EMS4_F_CoolantTemperature "The valid indication of EMS4_N_CoolantTemperature";
+CM_ SG_ 1472 EMS4_F_Barometer "The valid indication of EMS4_N_Barometer";
+CM_ SG_ 1472 EMS4_N_CoolantTemperature "Engine coolant temperature
+（E=N-40）";
+CM_ SG_ 1472 EMS4_N_Barometer "Describes the absolute ambient air pressure
+（E=N*0.5）";
+CM_ SG_ 1504 EGSM1_St_DrvRqShft "Driver requested gear shift position";
+CM_ SG_ 1504 EGSM1_St_StayInM "M position warning for IPC.This is a signal for EGSM In M when TCU is not in D";
+CM_ SG_ 1504 EGSM1_St_DrvRqPark "Driver Request Park Button
+Invalid Value(Hex)无效值:0x0";
+CM_ SG_ 1504 EGSM1_St_DrvRqUnlock "Driver Request Unlock Button
+Invalid Value(Hex)无效值:0x0";
+CM_ SG_ 1504 EGSM1_St_EShiftFault "this signal indicate E-shift fault which represent E-shift can not reflect the real driver demand because of any reason.
+Invalid Value(Hex)无效值:0x0";
+CM_ SG_ 1552 WCBS_ESP15_ACCActiveTimes "车身终身ACC激活次数";
+CM_ SG_ 1552 WCBS_ESP15_SolenoidTempture "10s内电磁阀最大温度";
+CM_ SG_ 1552 WCBS_ESP15_IgnitionTimes "点火次数";
+CM_ SG_ 1552 WCBS_ESP15_SolenoidTemInformatio "10s内电磁阀最大温度对应的具体电磁阀信息";
+CM_ SG_ 1552 WCBS_ESP15_BatteryVoltageMin "10S内最低电池电压";
+CM_ SG_ 1553 WCBS_ESP16_FaultInformmation "实时故障信息
+1023 无故障                
+0~1022对应相应故障码";
+CM_ SG_ 1553 WCBS_ESP16_RWUEPBSwitch "RWU激活时EPB开关状态";
+CM_ SG_ 1553 WCBS_ESP16_RWUActive "10S内RWU激活置位";
+CM_ SG_ 1553 WCBS_ESP16_BrakePressureMax "10s内最大制动压力";
+CM_ SG_ 1553 WCBS_ESP16_AEBActiveTimes "车辆终身AEB激活次数";
+CM_ SG_ 1553 WCBS_ESP16_BrakeTimes03G "车辆终身<0.3g制动次数";
+CM_ SG_ 1568 IPC1_F_OdometerParameter "The valid indication of odo meter，odo meter reset and odo meter offset in EEROM";
+CM_ SG_ 1568 IPC1_St_OilLevelWarning "Status of OilLevelWarning";
+CM_ SG_ 1568 IPC1_N_OdoMeter "The value of odo meter";
+CM_ SG_ 1600 WCBS_ESP3_N_FLWheelSpeed "Front Left Wheel Speed (E=N*0.0625)";
+CM_ SG_ 1600 WCBS_ESP3_F_FLWheelSpeed "This signal indicates the valid value of ESP3_N_FLWheelSpeed";
+CM_ SG_ 1600 WCBS_ESP3_N_FRWheelSpeed "Front Right Wheel Speed(E=N*0.0625)";
+CM_ SG_ 1600 WCBS_ESP3_F_FRWheelSpeed "This signal indicates the valid value of ESP3_N_FRWheelSpeed";
+CM_ SG_ 1602 WCBS_ESP18_BrushlessMotorTemptur "10s内无刷电机最大温度";
+CM_ SG_ 1602 WCBS_ESP18_BrushlessMotorTime "最近一次的制动持续时间（0.1s）";
+CM_ SG_ 1602 WCBS_ESP18_Reserved1 "预留";
+CM_ SG_ 1602 WCBS_ESP18_Reserved2 "预留";
+CM_ SG_ 1603 WCBS_ESP17_N_BrakeTimes05G "车辆终身<0.5g制动次数";
+CM_ SG_ 1603 WCBS_ESP17_N_BrakeTimes1G "车辆终身<1g制动次数";
+CM_ SG_ 1603 WCBS_ESP17_N_BrakePedalStroke "实时的制动踏板行程";
+CM_ SG_ 1616 WCBS_ESP4_N_RLWheelSpeed "Rear Left Wheel Speed(E=N*0.0625)";
+CM_ SG_ 1616 WCBS_ESP4_F_RLWheelSpeed "This signal indicates the valid value of ESP4_N_RLWheelSpeed";
+CM_ SG_ 1616 WCBS_ESP4_N_RRWheelSpeed "Rear Right Wheel Speed(E=N*0.0625)";
+CM_ SG_ 1616 WCBS_ESP4_F_RRWheelSpeed "This signal indicates the valid value of ESP4_N_RRWheelSpeed";
+CM_ SG_ 1643 BSG3_N_PosTrqPt "BSG positive torque potential";
+CM_ SG_ 1643 BSG3_N_NegTrqPt "BSG negative torque potential";
+CM_ SG_ 1643 BSG3_F_PosTrqPt "BSG positive torque potential vadility
+(Always send 1)";
+CM_ SG_ 1643 BSG3_F_NegTrqPt "BSG negative torque potential vadility
+(Always send 1)";
+CM_ SG_ 1643 BSG3_RollingCounter "Message counter for the message transmitted.
+The transmitter shall update the value of signal RollingCounter each time the message is transmitted, even if no data updated in the message.
+The value of the rolling counter increases according to the sequence such as '0,1,2...15,0,1,2...15', and the initial value will be set to zero once transmission is started.";
+CM_ SG_ 1643 BSG3_Checksum "Checksum of the frame status
+Checksum = (byte0+byte1+…+byte 6）and 0xFF";
+CM_ SG_ 1646 BSG_Diag1_St_BrushWearFault "Too high brush wear voltage drop detection";
+CM_ SG_ 1646 BSG_Diag1_St_CANComErr "CAN fault detection";
+CM_ SG_ 1646 BSG_Diag1_St_CANComInv "CAN message invalid detection";
+CM_ SG_ 1646 BSG_Diag1_St_DCVolSenFault "+BAT48V Voltage sensor fault detection";
+CM_ SG_ 1646 BSG_Diag1_St_ExcSCFault "Excitation loop short citcuit detection";
+CM_ SG_ 1646 BSG_Diag1_St_InverterFault "Power module failure detection in functional mode";
+CM_ SG_ 1646 BSG_Diag1_St_LoadDump "Load dump detection on +BAT48V";
+CM_ SG_ 1646 BSG_Diag1_St_OvrHeat "Thermal overheating protection Flag for stator, rotor, Powermodule, Control Board and Excitation board";
+CM_ SG_ 1646 BSG_Diag1_St_OverVoltage "Too high voltage detection on +BAT48V detection";
+CM_ SG_ 1646 BSG_Diag1_St_PHXCurrSenFault "Phase current sensor fault detection";
+CM_ SG_ 1646 BSG_Diag1_St_PosSenFault "Position sensor failure detection";
+CM_ SG_ 1646 BSG_Diag1_St_RevSpdFault "Reverse rotation protection";
+CM_ SG_ 1646 BSG_Diag1_St_RotorOverCurr "Rotor over current detection in functional mode";
+CM_ SG_ 1646 BSG_Diag1_St_StatorFault "Power module failure detection in functional mode";
+CM_ SG_ 1646 BSG_Diag1_St_StatorOverCurr "Stator phase over current detection";
+CM_ SG_ 1646 BSG_Diag1_St_StalledRotorProt "Inverter thermal protection during cranking phase (stalled rotor)";
+CM_ SG_ 1646 BSG_Diag1_St_TorqLevelFault "Unexpected torque level detection";
+CM_ SG_ 1646 BSG_Diag1_St_UnlockPTLFault "Power module failure detection in functional mode";
+CM_ SG_ 1646 BSG_Diag1_St_HighSpeed "the BSG speed is exceeding a critical upper limit.";
+CM_ SG_ 1646 BSG_Diag1_St_UnderVolProt "48V Bus voltage low protection";
+CM_ SG_ 1646 BSG_Diag1_St_CurExcSCHigh "a Excitation Current Sensor circuit high fault.";
+CM_ SG_ 1646 BSG_Diag1_St_CurExcSCLow "a Excitation Current Sensor circuit low fault.";
+CM_ SG_ 1646 BSG_Diag1_St_CurExcOffset "an Excitation Current Sensor offset fault.";
+CM_ SG_ 1646 BSG_Diag1_St_InvTempSenFault "the inverter temperature sensor fault";
+CM_ SG_ 1646 BSG_Diag1_St_3V3VolFault "a 3V3 Voltage Sensor fault";
+CM_ SG_ 1646 BSG_Diag1_St_12VolFault "a 12V Voltage Sensor fault";
+CM_ SG_ 1646 BSG_Diag1_St_15SWVolFault "a 15SW Voltage Sensor fault.";
+CM_ SG_ 1646 BSG_Diag1_St_12VRefVolFault "a P15V Voltage Sensor fault.";
+CM_ SG_ 1646 BSG_Diag1_St_OperModeProt "Out of range on voltage or speed or temperature";
+CM_ SG_ 1646 BSG_Diag1_St_VolCtrlFault "Checks whether the DC link voltage control works properly.";
+CM_ SG_ 1646 BSG_Diag1_St_ExcDrStaMoFault "Check whether the standby mode works properly";
+CM_ SG_ 1646 BSG_Diag1_St_CrashFault "Crash event";
+CM_ SG_ 1646 BSG_Diag1_St_12VVolHigh "12V network high voltage detection";
+CM_ SG_ 1646 BSG_Diag1_St_12VVolLow "12V network low voltage detection";
+CM_ SG_ 1654 AC3_St_Auto "The status of Rear AC Auto Light";
+CM_ SG_ 1654 AC3_St_RBlowerMode "Rear AC BlowerMode";
+CM_ SG_ 1654 AC3_St_RBlowerLevel "Rear AC Blowerlevel";
+CM_ SG_ 1654 AC3_N_RTempDisp "Driver throttle temperature display";
+CM_ SG_ 1686 DVR2_St_Recording "Recording status,request IPC to display' DVR fault'";
+CM_ SG_ 1686 DVR2_St_SD "SD  status";
+CM_ SG_ 1686 DVR2_W_PhotoOverflow "Photo overflow  warning";
+CM_ SG_ 1686 DVR2_W_ParkMonitor "Parking monitoring warning";
+CM_ SG_ 1686 DVR2_W_SavFil "Saving Files warning";
+CM_ SG_ 1686 DVR2_W_CommunFail "Communication failure  warning";
+CM_ SG_ 1686 DVR2_W_MPUStart "MPU start warning";
+CM_ SG_ 1686 DVR2_W_CamMalf "Camera malfunction warning";
+CM_ SG_ 1686 DVR2_W_SDFormat "SD format";
+CM_ SG_ 1686 DVR2_W_SD "SD warning";
+BA_DEF_ SG_  "DateType" ENUM  "BLN","ENM","UNM","SNM";
+BA_DEF_ SG_  "GenSigRemark" STRING ;
+BA_DEF_ SG_  "GenSigLeavl" STRING ;
+BA_DEF_ SG_  "GenSignalConfigure" STRING ;
+BA_DEF_ SG_  "GenSigConversion" STRING ;
+BA_DEF_ SG_  "GenSigInitialValuestr" STRING ;
+BA_DEF_ SG_  "GenSigDefaultValue" STRING ;
+BA_DEF_ SG_  "GenSigInitialValue" HEX 0 100000;
+BA_DEF_ SG_  "GenNodeConfigure" ENUM  "LV1_NT1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMessageConfigure" STRING ;
+BA_DEF_ BO_  "GenMsgRemark" STRING ;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cycle","NoSendType","IfActive","Event";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "cycle","OnChange","OnWrite","IfActive","OnChangeWithRepetition","OnWriteWithRepetition","IfActiveWithRepetition";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 1000000000;
+BA_DEF_ BO_  "GenMsgCycleTimeActive" INT 0 0;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "DiagStationAddress" HEX 0 255;
+BA_DEF_ BU_  "NmNode" ENUM  "Not","Yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 65535;
+BA_DEF_ BU_  "NmCAN" INT 0 2;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 0 2047;
+BA_DEF_  "NmMessageCount" INT 0 255;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v3_0" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v2_3" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v3_1" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v2_2" INT 0 0;
+BA_DEF_ BO_  "_Cdb_Sc_CTm_FAW_v2_1" INT 0 0;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "DateType" "BLN";
+BA_DEF_DEF_  "GenSigRemark" "";
+BA_DEF_DEF_  "GenSigLeavl" "";
+BA_DEF_DEF_  "GenSignalConfigure" "";
+BA_DEF_DEF_  "GenSigConversion" "";
+BA_DEF_DEF_  "GenSigInitialValuestr" "";
+BA_DEF_DEF_  "GenSigDefaultValue" "";
+BA_DEF_DEF_  "GenSigInitialValue" 0;
+BA_DEF_DEF_  "GenNodeConfigure" "";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "GenMessageConfigure" "";
+BA_DEF_DEF_  "GenMsgRemark" "";
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgSendType" "cycle";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "cycle";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeActive" 0;
+BA_DEF_DEF_  "ILUsed" "No";
+BA_DEF_DEF_  "DiagStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "Not";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmCAN" 0;
+BA_DEF_DEF_  "Manufacturer" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "NmMessageCount" 128;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v3_0" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v2_3" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v3_1" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v2_2" 0;
+BA_DEF_DEF_  "_Cdb_Sc_CTm_FAW_v2_1" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "No";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "DBName" "TBUS";
+BA_ "GenMsgSendType" BO_ 119 3;
+BA_ "GenMsgSendType" BO_ 117 3;
+BA_ "GenMsgSendType" BO_ 112 1;
+BA_ "GenMsgSendType" BO_ 121 1;
+BA_ "GenMsgSendType" BO_ 122 1;
+BA_ "GenMsgCycleTime" BO_ 1093 100;
+BA_ "NmMessage" BO_ 1093 1;
+BA_ "GenMsgCycleTime" BO_ 1321 100;
+BA_ "GenMsgSendType" BO_ 1576 1;
+BA_ "GenMsgSendType" BO_ 1577 1;
+BA_ "GenMsgSendType" BO_ 101 1;
+BA_ "GenMsgSendType" BO_ 120 1;
+BA_ "GenMsgCycleTime" BO_ 272 10;
+BA_ "GenMsgCycleTime" BO_ 323 10;
+BA_ "GenMsgCycleTime" BO_ 383 10;
+BA_ "GenMsgCycleTime" BO_ 384 10;
+BA_ "GenMsgCycleTime" BO_ 416 10;
+BA_ "GenMsgCycleTime" BO_ 418 10;
+BA_ "GenMsgCycleTime" BO_ 544 100;
+BA_ "GenMsgCycleTime" BO_ 562 100;
+BA_ "GenMsgCycleTime" BO_ 640 10;
+BA_ "GenMsgCycleTime" BO_ 657 20;
+BA_ "GenMsgCycleTime" BO_ 784 20;
+BA_ "GenMsgCycleTime" BO_ 785 20;
+BA_ "GenMsgCycleTime" BO_ 792 20;
+BA_ "GenMsgCycleTime" BO_ 800 20;
+BA_ "GenMsgCycleTime" BO_ 847 50;
+BA_ "GenMsgNrOfRepetition" BO_ 848 10;
+BA_ "GenMsgCycleTimeFast" BO_ 848 20;
+BA_ "GenMsgCycleTime" BO_ 848 100;
+BA_ "GenMsgCycleTime" BO_ 866 100;
+BA_ "GenMsgCycleTime" BO_ 880 100;
+BA_ "GenMsgCycleTime" BO_ 885 100;
+BA_ "GenMsgCycleTime" BO_ 928 10;
+BA_ "GenMsgCycleTime" BO_ 992 10;
+BA_ "GenMsgCycleTime" BO_ 1173 100;
+BA_ "GenMsgCycleTime" BO_ 1184 50;
+BA_ "GenMsgCycleTime" BO_ 1203 100;
+BA_ "GenMsgCycleTime" BO_ 1248 20;
+BA_ "GenMsgCycleTime" BO_ 1264 100;
+BA_ "GenMsgCycleTime" BO_ 1297 20;
+BA_ "GenMsgCycleTime" BO_ 1313 1000;
+BA_ "GenMsgCycleTime" BO_ 1328 100;
+BA_ "GenMsgCycleTime" BO_ 1344 500;
+BA_ "GenMsgCycleTime" BO_ 1360 200;
+BA_ "GenMsgCycleTime" BO_ 1377 100;
+BA_ "GenMsgCycleTime" BO_ 1392 50;
+BA_ "GenMsgCycleTime" BO_ 1393 50;
+BA_ "GenMsgCycleTime" BO_ 1408 100;
+BA_ "GenMsgCycleTime" BO_ 1424 100;
+BA_ "GenMsgCycleTime" BO_ 1425 50;
+BA_ "GenMsgCycleTime" BO_ 1445 100;
+BA_ "GenMsgCycleTime" BO_ 1472 1000;
+BA_ "GenMsgCycleTime" BO_ 1504 10;
+BA_ "GenMsgCycleTime" BO_ 1552 10000;
+BA_ "GenMsgCycleTime" BO_ 1553 10000;
+BA_ "GenMsgCycleTime" BO_ 1568 100;
+BA_ "GenMsgCycleTime" BO_ 1600 20;
+BA_ "GenMsgCycleTime" BO_ 1602 10000;
+BA_ "GenMsgCycleTime" BO_ 1603 10000;
+BA_ "GenMsgCycleTime" BO_ 1616 20;
+BA_ "GenMsgCycleTime" BO_ 1643 10;
+BA_ "GenMsgCycleTime" BO_ 1646 100;
+BA_ "GenMsgCycleTime" BO_ 1654 100;
+BA_ "GenMsgCycleTime" BO_ 1686 500;
+BA_ "GenMsgSendType" BO_ 1963 1;
+BA_ "DiagResponse" BO_ 1963 1;
+BA_ "DiagState" BO_ 1963 1;
+BA_ "GenMsgSendType" BO_ 2016 1;
+BA_ "DiagResponse" BO_ 2016 1;
+BA_ "DiagState" BO_ 2016 1;
+BA_ "GenMsgSendType" BO_ 2017 1;
+BA_ "DiagResponse" BO_ 2017 1;
+BA_ "DiagState" BO_ 2017 1;
+BA_ "GenMsgSendType" BO_ 2019 1;
+BA_ "DiagResponse" BO_ 2019 1;
+BA_ "DiagState" BO_ 2019 1;
+BA_ "GenMsgSendType" BO_ 2018 1;
+BA_ "DiagResponse" BO_ 2018 1;
+BA_ "DiagState" BO_ 2018 1;
+BA_ "GenMsgSendType" BO_ 1808 1;
+BA_ "DiagResponse" BO_ 1808 1;
+BA_ "DiagState" BO_ 1808 1;
+BA_ "GenMsgSendType" BO_ 1809 1;
+BA_ "DiagResponse" BO_ 1809 1;
+BA_ "DiagState" BO_ 1809 1;
+BA_ "GenMsgSendType" BO_ 1815 1;
+BA_ "DiagResponse" BO_ 1815 1;
+BA_ "DiagState" BO_ 1815 1;
+BA_ "GenMsgSendType" BO_ 1819 1;
+BA_ "DiagResponse" BO_ 1819 1;
+BA_ "DiagState" BO_ 1819 1;
+BA_ "GenMsgSendType" BO_ 2021 1;
+BA_ "DiagResponse" BO_ 2021 1;
+BA_ "DiagState" BO_ 2021 1;
+BA_ "GenMsgSendType" BO_ 2020 1;
+BA_ "DiagResponse" BO_ 2020 1;
+BA_ "DiagState" BO_ 2020 1;
+BA_ "GenMsgSendType" BO_ 1822 1;
+BA_ "DiagResponse" BO_ 1822 1;
+BA_ "DiagState" BO_ 1822 1;
+BA_ "GenMsgSendType" BO_ 1824 1;
+BA_ "DiagResponse" BO_ 1824 1;
+BA_ "DiagState" BO_ 1824 1;
+BA_ "GenMsgSendType" BO_ 2033 1;
+BA_ "DiagResponse" BO_ 2033 1;
+BA_ "DiagState" BO_ 2033 1;
+BA_ "GenMsgSendType" BO_ 1827 1;
+BA_ "DiagResponse" BO_ 1827 1;
+BA_ "DiagState" BO_ 1827 1;
+BA_ "GenMsgSendType" BO_ 1828 1;
+BA_ "DiagResponse" BO_ 1828 1;
+BA_ "DiagState" BO_ 1828 1;
+BA_ "GenMsgSendType" BO_ 1829 1;
+BA_ "DiagResponse" BO_ 1829 1;
+BA_ "DiagState" BO_ 1829 1;
+BA_ "GenMsgSendType" BO_ 1830 1;
+BA_ "DiagResponse" BO_ 1830 1;
+BA_ "DiagState" BO_ 1830 1;
+BA_ "GenMsgSendType" BO_ 1831 1;
+BA_ "DiagResponse" BO_ 1831 1;
+BA_ "DiagState" BO_ 1831 1;
+BA_ "GenMsgSendType" BO_ 1832 1;
+BA_ "DiagResponse" BO_ 1832 1;
+BA_ "DiagState" BO_ 1832 1;
+BA_ "GenMsgSendType" BO_ 1834 1;
+BA_ "DiagResponse" BO_ 1834 1;
+BA_ "DiagState" BO_ 1834 1;
+BA_ "GenMsgSendType" BO_ 1836 1;
+BA_ "DiagResponse" BO_ 1836 1;
+BA_ "DiagState" BO_ 1836 1;
+BA_ "GenMsgSendType" BO_ 1838 1;
+BA_ "DiagResponse" BO_ 1838 1;
+BA_ "DiagState" BO_ 1838 1;
+BA_ "GenMsgSendType" BO_ 1839 1;
+BA_ "DiagResponse" BO_ 1839 1;
+BA_ "DiagState" BO_ 1839 1;
+BA_ "GenMsgSendType" BO_ 1850 1;
+BA_ "DiagResponse" BO_ 1850 1;
+BA_ "DiagState" BO_ 1850 1;
+BA_ "GenMsgSendType" BO_ 1851 1;
+BA_ "DiagResponse" BO_ 1851 1;
+BA_ "DiagState" BO_ 1851 1;
+BA_ "GenMsgSendType" BO_ 1852 1;
+BA_ "DiagResponse" BO_ 1852 1;
+BA_ "DiagState" BO_ 1852 1;
+BA_ "GenMsgSendType" BO_ 1853 1;
+BA_ "DiagResponse" BO_ 1853 1;
+BA_ "DiagState" BO_ 1853 1;
+BA_ "GenMsgSendType" BO_ 1854 1;
+BA_ "DiagResponse" BO_ 1854 1;
+BA_ "DiagState" BO_ 1854 1;
+BA_ "GenMsgSendType" BO_ 1855 1;
+BA_ "DiagResponse" BO_ 1855 1;
+BA_ "DiagState" BO_ 1855 1;
+BA_ "GenMsgSendType" BO_ 1856 1;
+BA_ "DiagResponse" BO_ 1856 1;
+BA_ "DiagState" BO_ 1856 1;
+BA_ "GenMsgSendType" BO_ 1858 1;
+BA_ "DiagResponse" BO_ 1858 1;
+BA_ "DiagState" BO_ 1858 1;
+BA_ "GenMsgSendType" BO_ 1859 1;
+BA_ "DiagResponse" BO_ 1859 1;
+BA_ "DiagState" BO_ 1859 1;
+BA_ "GenMsgSendType" BO_ 1861 1;
+BA_ "DiagResponse" BO_ 1861 1;
+BA_ "DiagState" BO_ 1861 1;
+BA_ "GenMsgSendType" BO_ 1862 1;
+BA_ "DiagResponse" BO_ 1862 1;
+BA_ "DiagState" BO_ 1862 1;
+BA_ "GenMsgSendType" BO_ 1863 1;
+BA_ "DiagResponse" BO_ 1863 1;
+BA_ "DiagState" BO_ 1863 1;
+BA_ "GenMsgSendType" BO_ 1817 1;
+BA_ "DiagResponse" BO_ 1817 1;
+BA_ "DiagState" BO_ 1817 1;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "DiagResponse" BO_ 2015 1;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "GenMsgSendType" BO_ 1835 1;
+BA_ "DiagResponse" BO_ 1835 1;
+BA_ "DiagState" BO_ 1835 1;
+BA_ "GenMsgSendType" BO_ 2024 1;
+BA_ "DiagResponse" BO_ 2024 1;
+BA_ "DiagState" BO_ 2024 1;
+BA_ "GenMsgSendType" BO_ 2025 1;
+BA_ "DiagResponse" BO_ 2025 1;
+BA_ "DiagState" BO_ 2025 1;
+BA_ "GenMsgSendType" BO_ 2027 1;
+BA_ "DiagResponse" BO_ 2027 1;
+BA_ "DiagState" BO_ 2027 1;
+BA_ "GenMsgSendType" BO_ 2026 1;
+BA_ "DiagResponse" BO_ 2026 1;
+BA_ "DiagState" BO_ 2026 1;
+BA_ "GenMsgSendType" BO_ 1936 1;
+BA_ "DiagResponse" BO_ 1936 1;
+BA_ "DiagState" BO_ 1936 1;
+BA_ "GenMsgSendType" BO_ 1937 1;
+BA_ "DiagResponse" BO_ 1937 1;
+BA_ "DiagState" BO_ 1937 1;
+BA_ "GenMsgSendType" BO_ 1943 1;
+BA_ "DiagResponse" BO_ 1943 1;
+BA_ "DiagState" BO_ 1943 1;
+BA_ "GenMsgSendType" BO_ 1947 1;
+BA_ "DiagResponse" BO_ 1947 1;
+BA_ "DiagState" BO_ 1947 1;
+BA_ "GenMsgSendType" BO_ 2029 1;
+BA_ "DiagResponse" BO_ 2029 1;
+BA_ "DiagState" BO_ 2029 1;
+BA_ "GenMsgSendType" BO_ 2028 1;
+BA_ "DiagResponse" BO_ 2028 1;
+BA_ "DiagState" BO_ 2028 1;
+BA_ "GenMsgSendType" BO_ 1950 1;
+BA_ "DiagResponse" BO_ 1950 1;
+BA_ "DiagState" BO_ 1950 1;
+BA_ "GenMsgSendType" BO_ 1952 1;
+BA_ "DiagResponse" BO_ 1952 1;
+BA_ "DiagState" BO_ 1952 1;
+BA_ "GenMsgSendType" BO_ 2041 1;
+BA_ "DiagResponse" BO_ 2041 1;
+BA_ "DiagState" BO_ 2041 1;
+BA_ "GenMsgSendType" BO_ 1955 1;
+BA_ "DiagResponse" BO_ 1955 1;
+BA_ "DiagState" BO_ 1955 1;
+BA_ "GenMsgSendType" BO_ 1956 1;
+BA_ "DiagResponse" BO_ 1956 1;
+BA_ "DiagState" BO_ 1956 1;
+BA_ "GenMsgSendType" BO_ 1957 1;
+BA_ "DiagResponse" BO_ 1957 1;
+BA_ "DiagState" BO_ 1957 1;
+BA_ "GenMsgSendType" BO_ 1958 1;
+BA_ "DiagResponse" BO_ 1958 1;
+BA_ "DiagState" BO_ 1958 1;
+BA_ "GenMsgSendType" BO_ 1959 1;
+BA_ "DiagResponse" BO_ 1959 1;
+BA_ "DiagState" BO_ 1959 1;
+BA_ "GenMsgSendType" BO_ 1960 1;
+BA_ "DiagResponse" BO_ 1960 1;
+BA_ "DiagState" BO_ 1960 1;
+BA_ "GenMsgSendType" BO_ 1962 1;
+BA_ "DiagResponse" BO_ 1962 1;
+BA_ "DiagState" BO_ 1962 1;
+BA_ "GenMsgSendType" BO_ 1964 1;
+BA_ "DiagResponse" BO_ 1964 1;
+BA_ "DiagState" BO_ 1964 1;
+BA_ "GenMsgSendType" BO_ 1966 1;
+BA_ "DiagResponse" BO_ 1966 1;
+BA_ "DiagState" BO_ 1966 1;
+BA_ "GenMsgSendType" BO_ 1967 1;
+BA_ "DiagResponse" BO_ 1967 1;
+BA_ "DiagState" BO_ 1967 1;
+BA_ "GenMsgSendType" BO_ 1978 1;
+BA_ "DiagResponse" BO_ 1978 1;
+BA_ "DiagState" BO_ 1978 1;
+BA_ "GenMsgSendType" BO_ 1979 1;
+BA_ "DiagResponse" BO_ 1979 1;
+BA_ "DiagState" BO_ 1979 1;
+BA_ "GenMsgSendType" BO_ 1980 1;
+BA_ "DiagResponse" BO_ 1980 1;
+BA_ "DiagState" BO_ 1980 1;
+BA_ "GenMsgSendType" BO_ 1981 1;
+BA_ "DiagResponse" BO_ 1981 1;
+BA_ "DiagState" BO_ 1981 1;
+BA_ "GenMsgSendType" BO_ 1982 1;
+BA_ "DiagResponse" BO_ 1982 1;
+BA_ "DiagState" BO_ 1982 1;
+BA_ "GenMsgSendType" BO_ 1983 1;
+BA_ "DiagResponse" BO_ 1983 1;
+BA_ "DiagState" BO_ 1983 1;
+BA_ "GenMsgSendType" BO_ 1984 1;
+BA_ "DiagResponse" BO_ 1984 1;
+BA_ "DiagState" BO_ 1984 1;
+BA_ "GenMsgSendType" BO_ 1986 1;
+BA_ "DiagResponse" BO_ 1986 1;
+BA_ "DiagState" BO_ 1986 1;
+BA_ "GenMsgSendType" BO_ 1987 1;
+BA_ "DiagResponse" BO_ 1987 1;
+BA_ "DiagState" BO_ 1987 1;
+BA_ "GenMsgSendType" BO_ 1989 1;
+BA_ "DiagResponse" BO_ 1989 1;
+BA_ "DiagState" BO_ 1989 1;
+BA_ "GenMsgSendType" BO_ 1990 1;
+BA_ "DiagResponse" BO_ 1990 1;
+BA_ "DiagState" BO_ 1990 1;
+BA_ "GenMsgSendType" BO_ 1991 1;
+BA_ "DiagResponse" BO_ 1991 1;
+BA_ "DiagState" BO_ 1991 1;
+BA_ "GenMsgSendType" BO_ 1945 1;
+BA_ "DiagResponse" BO_ 1945 1;
+BA_ "DiagState" BO_ 1945 1;
+BA_ "GenSigSendType" SG_ 112 SUB_ID_70 1;
+BA_ "GenSigSendType" SG_ 112 RAND_NUM_REPLY 1;
+BA_ "GenSigSendType" SG_ 121 SubID79 1;
+BA_ "GenSigSendType" SG_ 121 TBOX_St_Learn 1;
+BA_ "GenSigSendType" SG_ 122 SUB_ID_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_0_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_1_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_2_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_3_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_4_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_5_7A 1;
+BA_ "GenSigSendType" SG_ 122 LEARNING_DATA_6_7A 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_BlowerMode 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_DualSt 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_Recir 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_RearDef 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_AC 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_Auto 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_Blowerlevel 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Set_AirPuriAndAutoLink 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Set_UnlockFreshAirSwitch 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Set_AnionSwitch 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Set_AQSSwitch 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_AcSys 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_Anion 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_PM25 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_DriTemp 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_St_VideoUploadFail 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_EHCMute 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_St_Mode 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Set_PaTemp 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_TeleRestoreParking 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_ParkingType 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_St_PhotoUploadFail 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_DVRPhoto 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Set_PM25Switch 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_ParkingInMode 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_ControlRequest 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_ParkingControl 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_ParkingOutDirection 1;
+BA_ "GenSigSendType" SG_ 1576 TBOX3_Cmd_ParkingOutType 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_St_RemoteControlMode 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_LFSeatHeating 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_DoorLock 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_LFSeatVentilation 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_RFSeatVentilation 1;
+BA_ "GenSigStartValue" SG_ 1577 TBOX2_Cmd_SecondRSeatHeat 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_SecondRSeatHeat 1;
+BA_ "GenSigStartValue" SG_ 1577 TBOX2_Cmd_SecondLSeatHeat 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_SecondLSeatHeat 1;
+BA_ "GenSigStartValue" SG_ 1577 TBOX2_Cmd_SecondRSeatVentilation 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_SecondRSeatVentilation 1;
+BA_ "GenSigStartValue" SG_ 1577 TBOX2_Cmd_SecondLSeatVentilation 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_SecondLSeatVentilation 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_RFSeatHeating 1;
+BA_ "GenSigStartValue" SG_ 1577 TBOX2_Cmd_WLMDriver 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_WLMDriver 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_WLMPassager 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_WLMRearLeft 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_ControlSSCU 1;
+BA_ "GenSigSendType" SG_ 1577 TBOX2_Cmd_ControlSRCU 1;
+BA_ "GenSigSendType" SG_ 101 SUB_ID_65 2;
+BA_ "GenSigSendType" SG_ 101 RAND_NUM_CHALLENGE 2;
+BA_ "GenSigSendType" SG_ 101 PEPS_TM_AUTHRESULT 2;
+BA_ "GenSigSendType" SG_ 101 AUTHEN_ERROR_TYPE 2;
+BA_ "GenSigSendType" SG_ 120 SubID78 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078_1 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078_2 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078_3 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078_4 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078_5 1;
+BA_ "GenSigSendType" SG_ 120 Lrngdata078_6 1;
+BA_ "GenSigStartValue" SG_ 272 TCM1_N_OilTemperature 60;
+BA_ "GenSigStartValue" SG_ 272 TCM1_N_Longtermtorque 1100;
+BA_ "GenSigStartValue" SG_ 323 EPS1_St_CurrMod 2;
+BA_ "GenSigStartValue" SG_ 323 EPS1_St_SteerMod 1;
+BA_ "GenSigStartValue" SG_ 323 EPS1_St_FailSts 1;
+BA_ "SystemSignalLongSymbol" SG_ 792 WCBS_ESP1_St_ESPTCSActiveTelltal "WCBS_ESP1_St_ESPTCSActiveTelltale";
+BA_ "GenSigSendType" SG_ 848 SDM1_St_AirbagDeployed 1;
+BA_ "GenSigStartValue" SG_ 885 AC2_St_BlowerMode 1;
+BA_ "GenSigStartValue" SG_ 885 AC2_St_SYNCDisplay 1;
+BA_ "GenSigStartValue" SG_ 992 TCM2_N_TargetGear 1;
+BA_ "GenSigStartValue" SG_ 992 TCM2_N_ActuralGear 1;
+BA_ "SystemSignalLongSymbol" SG_ 1264 ORIM1_St_CalibrationCompassZeroE "ORIM1_St_CalibrationCompassZeroEnd";
+BA_ "SystemSignalLongSymbol" SG_ 1264 ORIM1_St_CalibrationTiltingAngle "ORIM1_St_CalibrationTiltingAngleZeroEnd";
+BA_ "GenSigStartValue" SG_ 1377 BCM7_St_SecondRSeatVentilation 1;
+BA_ "GenSigStartValue" SG_ 1377 BCM7_St_SecondLSeatVentilation 1;
+BA_ "GenSigStartValue" SG_ 1377 BCM7_St_SecondRSeatHeat 1;
+BA_ "GenSigStartValue" SG_ 1377 BCM7_St_SecondLSeatHeat 1;
+BA_ "GenSigSendType" SG_ 1393 ESCL1_St_TextRotateSteeringWheel 1;
+BA_ "GenSigSendType" SG_ 1393 ESCL1_St_TextGarage 1;
+BA_ "GenSigSendType" SG_ 1393 ESCL1_St_TextDeect 1;
+BA_ "GenSigSendType" SG_ 1393 ESCL1_St_TextSteeringNotUnlock 1;
+BA_ "GenSigStartValue" SG_ 1424 PAS1_St_FPAS 1;
+BA_ "GenSigStartValue" SG_ 1504 EGSM1_St_DrvRqShft 14;
+BA_ "SystemSignalLongSymbol" SG_ 1552 WCBS_ESP15_SolenoidTemInformatio "WCBS_ESP15_SolenoidTemInformation";
+BA_ "SystemSignalLongSymbol" SG_ 1602 WCBS_ESP18_BrushlessMotorTemptur "WCBS_ESP18_BrushlessMotorTempture";
+BA_ "GenSigStartValue" SG_ 1643 BSG3_N_NegTrqPt 1023;
+VAL_ 119 EMS_CAPE2_St_ReplacementSubID 6 "postive Reply SC" 5 "Response to Set Learnt Command" 4 "third frame of SKC and SC" 3 "second frame of SKC and SC" 2 "first frame of SKC and SC" 1 "Report EMS learning status" ;
+VAL_ 117 EMS_CAPE1_St_LearningResponse 1 "EMS learnt" 0 "EMS virgin" ;
+VAL_ 117 EMS_CAPE1_St_ResponseSubID 1 "Response to Set Learnt Command" 0 "Report EMS learning status" ;
+VAL_ 112 SUB_ID_70 2 "Sub_ID for Reply" 1 "Sub-ID for trig" ;
+VAL_ 121 SubID79 5 "Response to Set Learnt Command" 4 "Notused" 3 "Notused" 2 "Notused" 1 "Report T-Box Learning status" 0 "Notused" ;
+VAL_ 121 TBOX_St_Learn 1 "T-Box learnt" 0 "T-Box virgin" ;
+VAL_ 1093 TBOX_NM_ALIVE 1 "Active" 0 "Not active" ;
+VAL_ 1093 TBOX_NM_RING 1 "Active" 0 "Not active" ;
+VAL_ 1093 TBOX_NM_LIMPHOME 1 "Active" 0 "Not active" ;
+VAL_ 1093 TBOX_NM_SLEEP_IND 1 "Active" 0 "Not active" ;
+VAL_ 1093 TBOX_NM_SLEEP_ACK 1 "Active" 0 "Not active" ;
+VAL_ 1321 TBOX1_St_Warning 1 "Warning" 0 "NO warning" ;
+VAL_ 1321 TBOX1_St_Remote 5 "ReStart_Nomal_Exit" 4 "ReStart_Abomal_Exit" 3 "ReStart_Fail" 2 "ReStart_Sucess" 1 "ReStart_St_Process" 0 "Nomal" ;
+VAL_ 1321 TBOX1_St_TmBt 1 "Connect" 0 "No Connect" ;
+VAL_ 1321 TBOX1_St_ConnectAPA 1 "连接成功 Connect_Success" 0 "连接失败 Connect_Fail" ;
+VAL_ 1321 TBOX1_Cmd_RemoteStop 1 "Active" 0 "Inactive" ;
+VAL_ 1321 TBOX1_Cmd_RemoteStart 1 "Active" 0 "Inactive" ;
+VAL_ 1321 TBOX1_St_RemoteControlMode 3 "In Bluetooth Mode" 2 "In RLC Mode" 1 "In RES Mode" 0 "In Nor Mode" ;
+VAL_ 1321 TBOX1_St_Mode 1 "REMOTE" 0 "NOMAL" ;
+VAL_ 1321 TBOX1_Cmd_RearDefrost 1 "Active" 0 "Inactive" ;
+VAL_ 1321 TBOX1_St_Wokcondition 1 "Error" 0 "Normal" ;
+VAL_ 1576 TBOX3_Cmd_BlowerMode 5 "Defrost" 4 "Foot and Defrost" 3 "Foot" 2 "Face and Foot" 1 "Face" 0 "Standby" ;
+VAL_ 1576 TBOX3_Cmd_DualSt 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_Recir 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_RearDef 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_AC 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_Auto 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_Blowerlevel 10 "reserve" 9 "Level 8" 8 "Level 7" 7 "Level 6" 6 "Level 5" 5 "Level 4" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "Level 0" 0 "NoRequest" ;
+VAL_ 1576 TBOX3_Set_AirPuriAndAutoLink 1 "On" 0 "Off" ;
+VAL_ 1576 TBOX3_Set_UnlockFreshAirSwitch 1 "On" 0 "Off" ;
+VAL_ 1576 TBOX3_Set_AnionSwitch 1 "On" 0 "Off" ;
+VAL_ 1576 TBOX3_Set_AQSSwitch 1 "On" 0 "Off" ;
+VAL_ 1576 TBOX3_Cmd_AcSys 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_Anion 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_PM25 1 "Request" 0 "Not request" ;
+VAL_ 1576 TBOX3_Cmd_DriTemp 2880 "" 29 ":High" 28 "31.5oC" 27 "31oC" 26 "30.5oC" 25 "30oC" 24 "29.5oC" 23 "29oC" 22 "28.5oC" 21 "28oC" 20 "27.5oC" 19 "27oC" 18 "26.5oC" 17 "26oC" 16 "25.5oC" 15 "25oC" 14 "24.5oC" 13 "24oC" 12 "23.5oC" 11 "23oC" 10 "22.5oC" 9 "22oC" 8 "21.5oC" 7 "21oC" 6 "20.5oC" 5 "20oC" 4 "19.5oC" 3 "19oC" 2 "18.5oC" 1 "Low" 0 "NoRequest" ;
+VAL_ 1576 TBOX3_St_VideoUploadFail 1 "视频上传失败" 0 "无" ;
+VAL_ 1576 TBOX3_Cmd_EHCMute 1 "Active" 0 "Inactive" ;
+VAL_ 1576 TBOX3_St_Mode 1 "Remote" 0 "Normal" ;
+VAL_ 1576 TBOX3_Set_PaTemp 2880 "" 29 ":High" 28 "31.5oC" 27 "31oC" 26 "30.5oC" 25 "30oC" 24 "29.5oC" 23 "29oC" 22 "28.5oC" 21 "28oC" 20 "27.5oC" 19 "27oC" 18 "26.5oC" 17 "26oC" 16 "25.5oC" 15 "25oC" 14 "24.5oC" 13 "24oC" 12 "23.5oC" 11 "23oC" 10 "22.5oC" 9 "22oC" 8 "21.5oC" 7 "21oC" 6 "20.5oC" 5 "20oC" 4 "19.5oC" 3 "19oC" 2 "18.5oC" 1 "Low" 0 "NoRequest" ;
+VAL_ 1576 TBOX3_Cmd_TeleRestoreParking 2 "取消 Cancel" 1 "确定 Confirm" 0 "None" ;
+VAL_ 1576 TBOX3_Cmd_ParkingType 3 "自选车位功能 User_Slot_Parking_In" 2 "自动泊出功能 Auto_Parking_Out" 1 "自动泊入功能 Auto_Parking_In" 0 "NONE" ;
+VAL_ 1576 TBOX3_St_PhotoUploadFail 1 "拍照上传失败" 0 "无" ;
+VAL_ 1576 TBOX3_Cmd_DVRPhoto 2 "录短视频" 1 "拍照" 0 "无" ;
+VAL_ 1576 TBOX3_Set_PM25Switch 1 "Off" 0 "On" ;
+VAL_ 1576 TBOX3_Cmd_ParkingInMode 2 "遥控泊入 Tele_Control_Parking_In" 1 "一键泊入 One_Key_Parking_In" 0 "No request" ;
+VAL_ 1576 TBOX3_Cmd_ControlRequest 1 "Request" 0 "No request" ;
+VAL_ 1576 TBOX3_Cmd_ParkingControl 4 "退出 ParingQuit" 3 "暂停 Pause" 2 "泊出 ParkingOut" 1 "泊入 ParkingIn" 0 "None" ;
+VAL_ 1576 TBOX3_Cmd_ParkingOutDirection 2 "右边 Right" 1 "左边 Left" 0 "none" ;
+VAL_ 1576 TBOX3_Cmd_ParkingOutType 2 "遥控泊出 Tele_Control_Paring_Out" 1 "一键泊出 One_Key_Paring_Out" 0 "NONE" ;
+VAL_ 1577 TBOX2_St_RemoteControlMode 3 "In Bluetooth Mode" 2 "In RLC Mode" 1 "In RES Mode" 0 "In Nor Mode" ;
+VAL_ 1577 TBOX2_Cmd_LFSeatHeating 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_DoorLock 7 "Panic(Horn + Flash)" 6 "Flash" 5 "Horn" 4 "TailgateRelease" 3 "Unlock all doors" 2 "Unlock driver door(Reserved)" 1 "Lock all doors" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_LFSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_RFSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_SecondRSeatHeat 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_SecondLSeatHeat 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_SecondRSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_SecondLSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_RFSeatHeating 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_WLMDriver 7 "reserved" 6 "Auto Down" 5 "Auto Up" 4 "reserved" 3 "reserved" 2 "Manual Down(reserved)" 1 "Manual Up(reserved)" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_WLMPassager 7 "reserved" 6 "Auto Down" 5 "Auto Up" 4 "reserved" 3 "reserved" 2 "Manual Down(reserved)" 1 "Manual Up(reserved)" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_WLMRearLeft 7 "reserved" 6 "Auto Down" 5 "Auto Up" 4 "reserved" 3 "reserved" 2 "Manual Down(reserved)" 1 "Manual Up(reserved)" 0 "Inactive" ;
+VAL_ 1577 TBOX2_Cmd_ControlSSCU 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Stop" 11 "Full open" 10 "90%" 9 "80%" 8 "70%" 7 "60%" 6 "50%" 5 "40%" 4 "30%" 3 "20%" 2 "10%" 1 "Full closed" 0 "No action" ;
+VAL_ 1577 TBOX2_Cmd_ControlSRCU 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Stop" 11 "Full open" 10 "90%" 9 "80%" 8 "70%" 7 "60%" 6 "50%" 5 "40%" 4 "30%" 3 "20%" 2 "10%" 1 "Full closed" 0 "No action" ;
+VAL_ 101 SUB_ID_65 2 "AuthResult" 1 "Random Number" 0 "Not used" ;
+VAL_ 101 PEPS_TM_AUTHRESULT 1 "AuthFailed" 0 "No Error" ;
+VAL_ 101 AUTHEN_ERROR_TYPE 4 "Preconditions Quit(reserved)" 3 "Wrong Secret Key" 2 "TBOX No response" 1 "Not used" 0 "Normal" ;
+VAL_ 120 SubID78 6 "Reserved" 5 "Request set TBOX learning status to learnt" 4 "Request TBOX to store the third frame of SKCandSC" 3 "Request TBOX to store the second frame of SKCandSC" 2 "Request TBOX to store the first frame of SKCandSC" 1 "System Learning active (Req TBOX learning status)" 0 "Not used" ;
+VAL_ 272 TCM1_N_OilTemperature 255 "Invalid" ;
+VAL_ 272 TCM1_N_Longtermtorque 2047 "Invalid" ;
+VAL_ 323 EPS1_St_DrvStrInterDete 1 "Interference（干预）" 0 "Not Interference（未干预）" ;
+VAL_ 323 EPS1_St_TrqSnsrSts 1 "Abnormal" 0 "Normal" ;
+VAL_ 323 EPS1_St_CurrMod 3 "Reserved" 2 "No Display" 1 "ConditionNotMeet" 0 "ConditionMeet" ;
+VAL_ 323 EPS1_St_SteerMod 3 "Reserved" 2 "Sport  Mode" 1 "Standard Mode" 0 "Handy Mode" ;
+VAL_ 323 EPS1_St_FailSts 3 "Reserved" 2 "Intemittent Error Detected" 1 "Permant Error Detected" 0 "No Fault" ;
+VAL_ 323 EPS1_St_EPSControl 3 "control request not allowed(permanent)" 2 "control request not allowed(temporarily)" 1 "request honored" 0 "no request" ;
+VAL_ 323 EPS1_St_Requestfeedback 3 "Permanently Failed(永久失效)" 2 "Active（正处于被控制状态）" 1 "Avalibale For Contorl（可控）" 0 "Temporary Inhibit（暂时不可控）" ;
+VAL_ 323 EPS1_F_DrvStrInterDete 1 "Invalid（无效）；" 0 "Valid（有效）；" ;
+VAL_ 323 EPS1_F_ReqTorqueFeedack 1 "Valid" 0 "Invalid" ;
+VAL_ 383 EMS13_F_ActualWhlTorque 1 "invalid" 0 "valid" ;
+VAL_ 383 EMS13_F_RegenTrqWhlMax 1 "invalid" 0 "valid" ;
+VAL_ 383 EMS13_F_ActualBrRegenTrqWhl 1 "invalid" 0 "valid" ;
+VAL_ 384 SAS1_St_SASSensorInformation 1 "Sensor information valid" 0 "Sensor information invalid,an internal sensor fault occurred" ;
+VAL_ 384 SAS1_N_RotationSpeed 255 "Invalid" ;
+VAL_ 384 SAS1_N_SteeringAngle 65535 "Invalid" ;
+VAL_ 416 EMS1_F_AcceleratorPedal 1 "Invalid" 0 "Valid" ;
+VAL_ 416 EMS1_F_EngineSpeed 1 "Invalid" 0 "Valid" ;
+VAL_ 416 EMS1_F_TargetIdleSpeed 1 "Invalid" 0 "Valid" ;
+VAL_ 416 EMS1_N_TargetIdleSpeed 65535 "Invalid" ;
+VAL_ 418 EMS8_N_ActualTorque 8191 "Invalid" ;
+VAL_ 418 EMS8_F_ActualTorque 1 "Invalid" 0 "Valid" ;
+VAL_ 418 EMS8_F_DriverReqTorque_TCU 1 "Invalid" 0 "Valid" ;
+VAL_ 418 EMS8_F_ActualTorqueNoTCU 1 "Invalid" 0 "Valid" ;
+VAL_ 418 EMS8_N_DriverReqTorque_TCU 8191 "Invalid" ;
+VAL_ 418 EMS8_F_BSGEstTrqAct 1 "Invalid" 0 "Valid" ;
+VAL_ 418 EMS8_N_ActualTorqueNoTCU 8191 "Invalid" ;
+VAL_ 418 EMS8_N_BSGEstTrqAct 127 "Invalid" ;
+VAL_ 544 IPC6_St_FuelLevelSensor 2 "Short to BAT or Open" 1 "Short to GND" 0 "normal" ;
+VAL_ 562 EDS1_St_RearEDSLck 15 "Invalid" 14 "Fault" 4 "Lock Request Deny" 3 "Driving Mode Select Error（reserved）" 2 "Over-Speed Warning" 1 "Locked" 0 "UnLocked" ;
+VAL_ 562 EDS1_St_FrontEDSLck 15 "Invalid" 14 "Fault" 4 "Lock Request Deny" 3 "Driving Mode Select Error（reserved）" 2 "Over-Speed Warning" 1 "Locked" 0 "UnLocked" ;
+VAL_ 640 EMS5_St_WaterInOilTelltale 1 "lamp on" 0 "lamp off" ;
+VAL_ 640 EMS5_F_BrakePedal 1 "Invalid" 0 "Valid" ;
+VAL_ 640 EMS5_St_FuelQuality 1 "Abnormal  (warning)" 0 "Normal" ;
+VAL_ 640 EMS5_St_BrakePedal 1 "Pressed" 0 "No Pressed" ;
+VAL_ 640 EMS5_St_FuelCut 1 "Active" 0 "Inactive" ;
+VAL_ 640 EMS5_St_Cruise 1 "Active" 0 "Inactive" ;
+VAL_ 640 EMS5_St_LimpHome 1 "Limp home" 0 "Normal" ;
+VAL_ 640 EMS5_St_MILTelltale 1 "' engine mil' lamp" 0 "Normal" ;
+VAL_ 640 EMS5_St_CruiseMainSw 1 "switch on" 0 "switch off" ;
+VAL_ 640 EMS5_St_OilPressureTelltale 1 "'oil pressure warning' lamp" 0 "Normal" ;
+VAL_ 640 EMS5_St_SVSTelltale 1 "'check engine' lamp" 0 "Normal" ;
+VAL_ 640 EMS5_St_EngineStart 1 "Engine started" 0 "Engine in starting" ;
+VAL_ 640 EMS5_St_GlowTelltale 1 "lamp on" 0 "lamp off" ;
+VAL_ 640 EMS5_St_EngineCranking 1 "Active" 0 "Inactive" ;
+VAL_ 640 EMS5_St_EngineRunning 1 "Engine running" 0 "Engine NOT running, 200 ms after last revolution pulse." ;
+VAL_ 640 EMS5_St_GPFReIndic 3 "NSC（LNT)（Reserved）" 2 "Flicker" 1 "ON" 0 "OFF" ;
+VAL_ 657 APA2_St_APAStatus 7 "Suspended" 6 "Terminated" 5 "Failure" 4 "Completed" 3 "Guidance active" 2 "Searching" 1 "Standby" 0 "Off" ;
+VAL_ 657 APA2_St_Request 12 "车速过高 Over_Speed" 11 "车速过快无法找车位 Too_Fast_To_Searching_Slot" 10 "泊出完成 Parking_Out_Finished" 9 "选择泊出方向 Please_Select_Director" 8 "泊出空间不足 No_Room_To_Parking_Out" 7 "泊入完成 Parking_In_Finished" 6 "松开踏板双手离开方向盘 Please_Release_Brake" 5 "请选择车位方向并微调角度 Please_Use_Ueser_Slot" 4 "请确认车位并选择泊入方式Please_Select_Parking_Mode" 3 "找到车位请停车 Please_Stop" 2 "请挂D挡搜索车位 Please_Switch_D_Gear" 1 "向前行驶搜索车位 Go_Forward_And_Search_Slot" 0 "无请求 None" ;
+VAL_ 784 EPB1_St_WarningLamp 2 "Blinking" 1 "ON" 0 "OFF" ;
+VAL_ 784 EPB1_St_ParkLamp 2 "Blinking" 1 "ON" 0 "OFF" ;
+VAL_ 784 EPB1_St_ActuatorStR 7 "Adjust" 6 "Hold" 5 "Broken" 4 "Maintenance brake off" 3 "Closing" 2 "Brake Off" 1 "Brake On" 0 "Opening" ;
+VAL_ 784 EPB1_St_ActuatorStL 7 "Adjust" 6 "Hold" 5 "Broken" 4 "Maintenance brake off" 3 "Closing" 2 "Brake Off" 1 "Brake On" 0 "Opening" ;
+VAL_ 784 EPB1_St_4LParkingWarning 1 "Warning" 0 "Normal" ;
+VAL_ 784 EPB1_Disp_WithoutBrake 1 "True" 0 "Fault" ;
+VAL_ 784 EPB1_Disp_WithoutSeatBelt 1 "True" 0 "Fault" ;
+VAL_ 784 EPB1_St_EPBSwitch 3 "Invalid" 2 "Apply" 1 "Release" 0 "Neutral" ;
+VAL_ 784 EPB1_St_NoParkingWarning 1 "Warning" 0 "Normal" ;
+VAL_ 784 EPB1_St_DynamicApply 3 "Degrade Apply" 2 "RWU active" 1 "ECD request active" 0 "Not Active" ;
+VAL_ 785 WCBS_ESP5_F_VehicleSpeed 1 "Valid" 0 "Invalid" ;
+VAL_ 792 WCBS_ESP1_St_ABSActive 1 "ABS actually operating" 0 "ABS Standby" ;
+VAL_ 792 WCBS_ESP1_St_TCSActive 1 "Active" 0 "Not Active" ;
+VAL_ 792 WCBS_ESP1_Cmd_EPBPark 3 "Not  used" 2 "Apply park Brake" 1 "Release park Brake" 0 "No request" ;
+VAL_ 792 WCBS_ESP1_St_AutoHoldTelltale 1 "Fail" 0 "Not Fail" ;
+VAL_ 792 WCBS_ESP1_St_AutoHold 1 "Active" 0 "Not Active" ;
+VAL_ 792 WCBS_ESP1_St_ESPTCSOffTelltale 3 "VDC&TCS OFF；" 2 "VDC&P-TCS OFF；" 1 "VDC OFF；" 0 "No telltale requested；" ;
+VAL_ 792 WCBS_ESP1_St_ESPFailureTelltale 1 "Telltale requested" 0 "No telltale requested" ;
+VAL_ 792 WCBS_ESP1_St_HDCTelltale 3 "Error" 2 "Sparkling" 1 "Active" 0 "Inactive" ;
+VAL_ 792 WCBS_ESP1_St_ESPTCSActiveTelltal 1 "Telltale requested" 0 "No telltale requested" ;
+VAL_ 792 WCBS_ESP1_St_EBDTelltale 1 "Telltale requested" 0 "No telltale requested" ;
+VAL_ 792 WCBS_ESP1_St_ABSTelltale 1 "Telltale requested" 0 "No telltale requested" ;
+VAL_ 792 WCBS_ESP1_St_BrakeFluidW 1 "Active" 0 "Inactive" ;
+VAL_ 800 TCCU1_St_4H4L 3 "Error" 2 "4L" 1 "4H" 0 "2WD or N or AWD" ;
+VAL_ 800 TCCU1_St_Fault 33 "CAN communication failure" 17 "Motor failure" 9 "Switch failure" 5 "Shift failure" 3 "4WD ECU(TCCU) internal failure" 1 "Lamp Check (All 4WD lamps turn ON)" 0 "Normal Operation" ;
+VAL_ 800 TCCU1_St_ShiftCondition 6 "Front and rear wheel speed difference is over 3%" 5 "APS is over 10%" 4 "Clutch is not disengagged for shift(clutch pedal unpressed)" 3 "Gear position is not neutral for shift" 2 "Over speed for shift" 1 "Sfhit condition is matched" 0 "No operation(don't care)" 0 "(WhenthesignalTCCU1_St_4HorTCCU1_St_4Lis02)" ;
+VAL_ 847 BMS11_St_PackRelay 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "CB_State_fault" 1 "CB_State_closed" 0 "CB_State_open" ;
+VAL_ 847 BMS11_St_CBalOpen 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CANBusoff 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_ECUCommFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_HSDFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_AFECommFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_Ocp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_OverTemp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PackUvp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PackOvp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CellLUvp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CellLOvp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PwrUvp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PwrOvp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PackTempSampFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_InstCurrSampFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CellVolSampFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_StackVolSampFault 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CellDpDschrgUnr 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CellDeepChrg 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PackDeepDschrg 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_PackDeepChrg 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CbClosefail 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_EqualizeFail 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CbStuck 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CbUnexpectedOpen 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CellDpDschrgCbOpen 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_Sotp 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_SOCHighop 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_SOCHighup 1 "Actv" 0 "Inactv" ;
+VAL_ 847 BMS11_St_CbLife 3 "reserved" 2 "cb_Lifend" 1 "cb_Lifewarning" 0 "Normal" ;
+VAL_ 848 SDM1_St_AirbagWarningLamp 1 "ON(Request AWL lamp ON)" 0 "OFF(Request AWL lamp OFF)；" ;
+VAL_ 848 SDM1_St_RRSeatbelt 1 "Warning；" 0 "Not warning" ;
+VAL_ 848 SDM1_St_RMSeatbelt 1 "Warning；" 0 "Not warning" ;
+VAL_ 848 SDM1_St_RLSeatbelt 1 "Warning；" 0 "Not warning" ;
+VAL_ 848 SDM1_St_PASeatbelt 1 "Warning；" 0 "Not warning" ;
+VAL_ 848 SDM1_St_DRSeatbelt 1 "Buckled" 0 "Not buckled；" ;
+VAL_ 848 SDM1_St_AirbagDeployed 1 "crash" 0 "no crash" ;
+VAL_ 866 BCM4_St_SSCUSsPosnVRAPP 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Stop" 11 "Full open" 10 "90%" 9 "80%" 8 "70%" 7 "60%" 6 "50%" 5 "40%" 4 "30%" 3 "20%" 2 "10%" 1 "Full closed" 0 "No action" ;
+VAL_ 866 BCM4_St_SunRPosn 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Stop" 11 "Full open" 10 "90%" 9 "80%" 8 "70%" 7 "60%" 6 "50%" 5 "40%" 4 "30%" 3 "20%" 2 "10%" 1 "Full closed" 0 "No action" ;
+VAL_ 880 EMS3_F_AirFlowLoad 1 "Invalid" 0 "Valid" ;
+VAL_ 880 EMS3_F_TurboPressure 1 "Invalid" 0 "Valid" ;
+VAL_ 880 EMS3_F_FuelInjected 1 "Invalid" 0 "Valid" ;
+VAL_ 885 AC2_St_Blowerlevel 8 "Level 8" 7 "Level 7" 6 "Level 6" 5 "Level 5" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Level 0（default）" ;
+VAL_ 885 AC2_St_BlowerMode 5 "Defrost" 4 "Foot and Defrost" 3 "Foot" 2 "Face and Foot" 1 "Face（default）" 0 "Standby" ;
+VAL_ 885 AC2_St_PM25 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_St_FrontDef 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_St_ACSys 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_St_AutoDisplay 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_St_ACReq 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_St_SYNCDisplay 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_Cmd_RBlowerMode 5 "Defrost" 4 "Foot and Defrost" 3 "Foot" 2 "Face and Foot" 1 "Face" 0 "Standby" ;
+VAL_ 885 AC2_St_RemoteStartResponse 1 "Active" 0 "Inactive（default）" ;
+VAL_ 885 AC2_St_RearDef 1 "On" 0 "Off（default）" ;
+VAL_ 885 AC2_St_DispRequest 1 "Display Enable" 0 "Display Disable" ;
+VAL_ 885 AC2_St_Recir 2 "AQS" 1 "Recirculation mode" 0 "Fresh mode（default）" ;
+VAL_ 885 AC2_St_AirPuriAndAutoLink 1 "On" 0 "Off" ;
+VAL_ 885 AC2_St_UnlockFreshAirSwitch 1 "On" 0 "Off" ;
+VAL_ 885 AC2_St_AnionSwitch 1 "On" 0 "Off" ;
+VAL_ 885 AC2_St_AQSSwitch 1 "On" 0 "Off" ;
+VAL_ 928 EMS2_F_CrsCtrlSetSpd 1 "Invalid" 0 "Valid" ;
+VAL_ 928 EMS2_N_CrsCtrlSetSpd 8191 "Invalid" ;
+VAL_ 928 EMS2_F_ThrottleAngle 1 "Invalid" 0 "Valid" ;
+VAL_ 992 TCM2_F_ActuralGear 1 "Invalid" 0 "Value OK" ;
+VAL_ 992 TCM2_N_TargetGear 255 "Undefined" 17 "8" 16 "7" 15 "6" 9 "5" 8 "4" 7 "3" 6 "2" 5 "1" 3 "N" 2 "R" 1 "P" ;
+VAL_ 992 TCM2_St_LimpHome 1 "Gearbox in Limp home" 0 "Normal" ;
+VAL_ 992 TCM2_St_GearboxTelltale 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 992 TCM2_N_ActuralGear 255 "Undefine" 31 "Invalid Value" 17 "8" 16 "7" 15 "6" 9 "5" 8 "4" 7 "3" 6 "2" 5 "1" 3 "N" 2 "R" 1 "P" ;
+VAL_ 1173 WDDC1_St_LWDSensorFault 1 "Fault" 0 "No Fault" ;
+VAL_ 1173 WDDC1_W_WDOverLimit 3 "Danger area" 2 "Warning area" 1 "Safe area" 0 "No Warning" ;
+VAL_ 1173 WDDC1_St_WadeMode 1 "Active" 0 "Not Active" ;
+VAL_ 1173 WDDC1_St_ReadyATSMode 1 "Support" 0 "Not support" ;
+VAL_ 1173 WDDC1_St_RWDSensorFault 1 "Fault" 0 "No Fault" ;
+VAL_ 1184 BCM1_St_RWindowDefrost 3 "Protect" 2 "Fault" 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_HighBeam 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_Cmd_Horn 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_Cmd_PositionLamp 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_AntiThelfIndication 4 "Alarm" 3 "Remind" 2 "Prep.Arm" 1 "Arm," 0 "Disarm," ;
+VAL_ 1184 BCM1_St_PositionLamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_St_RightTurnLamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_Cmd_RightTurnLamp 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_LeftTurnLamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_Cmd_LeftTurnLamp 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_Hood 1 "Open" 0 "Close" ;
+VAL_ 1184 BCM1_St_TrunkDoor 1 "Open" 0 "Closed" ;
+VAL_ 1184 BCM1_St_RRDoor 1 "Door open" 0 "Door closed" ;
+VAL_ 1184 BCM1_St_LRDoor 1 "Door open" 0 "Door closed" ;
+VAL_ 1184 BCM1_St_PassengerDoor 1 "Door open" 0 "Door closed" ;
+VAL_ 1184 BCM1_St_DriverDoor 1 "Door open" 0 "Door closed" ;
+VAL_ 1184 BCM1_St_PasDoorLock 1 "Door unlocked" 0 "Door locked" ;
+VAL_ 1184 BCM1_St_LFDoorLock 1 "Door unlocked" 0 "Door locked" ;
+VAL_ 1184 BCM1_Sw_ReverseGear 1 "Active" 0 "Not active" ;
+VAL_ 1184 BCM1_Sw_Brake 1 "Active" 0 "Not active" ;
+VAL_ 1184 BCM1_Cmd_LowBeam 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_Cmd_HighBeam 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_Trunklock 1 "Lock" 0 "UnLock" ;
+VAL_ 1184 BCM1_St_LowBeam 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_St_DRL 3 "Reserved" 2 "Fault" 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_BrakeFluidLowWarning 1 "Warning" 0 "No warning" ;
+VAL_ 1184 BCM1_Cmd_CentralUnlock 1 "Active" 0 "Not active" ;
+VAL_ 1184 BCM1_Cmd_CentralLock 1 "Active" 0 "Not active" ;
+VAL_ 1184 BCM1_St_BrakeLamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_St_Reverselamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_St_RearFoglamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_Cmd_RearFoglamp 1 "ON" 0 "OFF" ;
+VAL_ 1184 BCM1_St_FrontFoglamp 1 "Fault" 0 "Normal" ;
+VAL_ 1184 BCM1_Cmd_FrontFoglamp 1 "ON" 0 "OFF" ;
+VAL_ 1203 BCM2_Cmd_TrunkUnLock 1 "Unlock" 0 "Inactive" ;
+VAL_ 1248 TCM5_St_TCUDriverWarnings0 1 "Warning" 0 "No warning" ;
+VAL_ 1248 TCM5_St_EngStartEnable 1 "OK to crank" 0 "not OK to crank" ;
+VAL_ 1264 ORIM1_F_AtmosphericPressure 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1264 ORIM1_St_CalibrationCompassZeroE 1 "End" 0 "No End" ;
+VAL_ 1264 ORIM1_St_CalibrationTiltingAngle 1 "End" 0 "No End" ;
+VAL_ 1264 ORIM1_St_CalibrationGyroZeroEnd 1 "End" 0 "No End" ;
+VAL_ 1264 ORIM1_F_CompassDirection 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1264 ORIM1_St_CompassDirection 7 "Northwest" 6 "West" 5 "Southwest" 4 "South" 3 "Southeast" 2 "East" 1 "Northeast," 0 "North" ;
+VAL_ 1264 ORIM1_F_AltitudeHeigh 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1264 ORIM1_F_AboutTiltingAngle 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1264 ORIM1_F_AroundThePitchAngle 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1264 ORIM1_F_CompassAngleSignal 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1297 ATS1_St_TCCUSwitch 7 "Error" 3 "Reserved" 2 "4L" 1 "4H" 0 "2WD" ;
+VAL_ 1297 ATS1_St_ConfirmedMode 15 "Fault" 14 "ATS sys not initialized" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Wade" 9 "Rock" 8 "Slip Mud" 7 "Mud" 6 "Sand" 5 "Cross" 4 "Deep Snow" 3 "Snow" 2 "Comfort" 1 "ECO" 0 "Sport" ;
+VAL_ 1297 ATS1_Cmd_RequestedMode 15 "Fault" 14 "ATS sys not initialized" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Wade" 9 "Rock" 8 "Slip Mud" 7 "Mud" 6 "Sand" 5 "Cross" 4 "Deep Snow" 3 "Snow" 2 "Comfort" 1 "ECO" 0 "Sport" ;
+VAL_ 1297 ATS1_W_Hint6 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint5 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint4 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint3 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint2 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint1 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint14 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint13 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint12 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint11 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint10 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint9 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint8 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint7 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint22 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint21 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint20 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint19 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint18 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint17 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint16 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint15 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint27 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint26 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint25 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint24 1 "hint" 0 "no hint" ;
+VAL_ 1297 ATS1_W_Hint23 1 "hint" 0 "no hint" ;
+VAL_ 1313 IPC4_N_AverFuelConsum 4095 "Invalid" ;
+VAL_ 1313 IPC4_N_ResiFuel 4095 "Invalid" ;
+VAL_ 1313 IPC4_N_InstanFuelConsum 4095 "Invalid" ;
+VAL_ 1313 IPC4_N_EnduranceMileage 4095 "Invalid" ;
+VAL_ 1328 AC1_Sw_Request 1 "Active" 0 "Not active（default）" ;
+VAL_ 1328 AC1_F_ACTemperature 1 "Invalid" 0 "Valid" ;
+VAL_ 1328 AC1_F_IncarTemp 1 "Invalid" 0 "Valid" ;
+VAL_ 1344 TPMS_St_TirePosition 7 "Reserved" 6 "Reserved；" 5 "Reserved；" 4 "Left rear tire；" 3 "Right rear tire；" 2 "Right front tire；" 1 "Left front tire；" 0 "No any sensor；" ;
+VAL_ 1344 TPMS_St_Signal 1 "Last signal" 0 "Current signal" ;
+VAL_ 1344 TPMS_St_RFPWarning 7 "Reserved" 6 "Sensor failure；" 5 "Sensor battery low；" 4 "Lost Sensor；" 3 "Quik leakage；" 2 "Low pressure warning；" 1 "High pressure warning；" 0 "No warning；" ;
+VAL_ 1344 TPMS_St_LFPWarning 7 "Reserved" 6 "Sensor failure；" 5 "Sensor battery low；" 4 "Lost Sensor；" 3 "Quik leakage；" 2 "Low pressure warning；" 1 "High pressure warning；" 0 "No warning；" ;
+VAL_ 1344 TPMS_St_SystemWarning 1 "System error" 0 "No any error" ;
+VAL_ 1344 TPMS_St_TWarning 1 "Temperature warning" 0 "No temperature warning" ;
+VAL_ 1344 TPMS_St_LRPWarning 7 "Reserved" 6 "Sensor failure；" 5 "Sensor battery low；" 4 "Lost Sensor；" 3 "Quik leakage；" 2 "Low pressure warning；" 1 "High pressure warning；" 0 "No warning；" ;
+VAL_ 1344 TPMS_St_RRPWarning 7 "Reserved" 6 "Sensor failure；" 5 "Sensor battery low；" 4 "Lost Sensor；" 3 "Quik leakage；" 2 "Low pressure warning；" 1 "High pressure warning；" 0 "No warning；" ;
+VAL_ 1360 DSM1_St_DriSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1360 DSM1_St_DriSeatHeat 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1360 DSM1_St_PasSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1360 DSM1_St_PasSeatHeat 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1377 BCM7_St_SecondRSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1377 BCM7_St_SecondLSeatVentilation 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1377 BCM7_St_SecondRSeatHeat 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1377 BCM7_St_SecondLSeatHeat 7 "reserved" 6 "reserved" 5 "reserved" 4 "Level 3" 3 "Level 2" 2 "Level 1" 1 "OFF" 0 "Inactive" ;
+VAL_ 1392 CAPE1_St_REMOTEStRes 1 "Active" 0 "Inactive" ;
+VAL_ 1392 CAPE1_St_PowerMode 5 "Crank Off(Reserve)" 4 "Crank" 3 "Crank Pending(Reserve)" 2 "Run" 1 "Acc" 0 "Off" ;
+VAL_ 1392 CAPE1_F_PowerMode 2 "Valid" 1 "Invalid" 0 "Not available" ;
+VAL_ 1392 CAPE1_St_RemoteStart 3 "Not used" 2 "RES Start" 1 "RES RUN" 0 "Invalid" ;
+VAL_ 1392 CAPE1_St_StRelayHSD 3 "Not used" 2 "Active" 1 "Inactive" 0 "Not available" ;
+VAL_ 1393 ESCL1_St_TextRotateSteeringWheel 1 "Steering wheel is blocked" 0 "Steering wheel is not blocked" ;
+VAL_ 1393 ESCL1_St_TextGarage 1 "Service relevant failure detected" 0 "No servie relevant failure detected" ;
+VAL_ 1393 ESCL1_St_TextDeect 1 "Defect failure detected" 0 "No defect failure detected" ;
+VAL_ 1393 ESCL1_St_TextSteeringNotUnlock 1 "ESCL couldn′t unlock" 0 "ESCL was able to unlock" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN7 1 "key in reminder" 0 "No Information" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN4 1 "Shift to P/N to start" 0 "No Information" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN2 1 "No UID found" 0 "No Information" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN1 1 "system red warning" 0 "No Information" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN0 1 "System yellow warning" 0 "No Information" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN10 1 "EMS authentication failure" 0 "No Information" ;
+VAL_ 1408 CAPE2_St_MiuMsgReqN9 1 "UID low battery" 0 "No Information" ;
+VAL_ 1424 PAS1_F_FLCMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_F_FLMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_St_FLC 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_St_FL 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_F_FRMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_F_FRCMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_St_FR 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_St_FRC 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_F_RLCMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_F_RLMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_St_RLC 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_St_RL 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_F_RRMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_F_RRCMalfunction 1 "false" 0 "normal" ;
+VAL_ 1424 PAS1_St_RR 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_St_RRC 7 "Range 7" 6 "Range 6" 5 "Range 5" 4 "Range 4" 3 "Range 3" 2 "Range 2" 1 "Range 1" 0 "No Distance" ;
+VAL_ 1424 PAS1_St_SpeakerWarn 1 "FL&FR Warning" 0 "No warning" ;
+VAL_ 1424 PAS1_St_WorkMODE 7 "Invalid(Reserved)" 6 "Inhibited" 5 "System Failure" 4 "Rear Active" 3 "Front Active" 2 "Front Rear Active" 1 "Standby" 0 "Off" ;
+VAL_ 1424 PAS1_St_ReverseWarnTone 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Buzzer ON at 1Hz" 3 "Buzzer ON at 2Hz" 2 "Buzzer ON at 4Hz" 1 "Buzzer ON" 0 "Buzzer OFF" ;
+VAL_ 1424 PAS1_St_FPAS 1 "ON" 0 "OFF" ;
+VAL_ 1425 APA4_St_ParkingType 3 "自选车位功能 User_Slot_Parking_In" 2 "自动泊出功能 Auto_Parking_Out" 1 "自动泊入功能 Auto_Parking_In" 0 "NONE" ;
+VAL_ 1425 APA4_St_Tracking 7 "循迹终止 Terminated" 6 "循迹暂停 Suspended" 5 "循迹失败 Failure" 4 "循迹完成 Completed" 3 "自动循迹 Guidance" 2 "循迹可用 Ready" 1 "等待 Standby" 0 "关闭 OFF" ;
+VAL_ 1425 APA4_St_TrackingFunction 1 "可用 avaliable" 0 "不可用 InAvailable" ;
+VAL_ 1425 APA4_St_TrackingRecover 5 "退出确认" 4 "暂停恢复 Recover" 3 "周边有障碍物且存在事件小于60s Obstacle_In" 2 "任一车门打开 Door_Opened" 1 "安全带松开 SeatBelt_Loosened" 0 "无事件 None" ;
+VAL_ 1425 APA4_St_LanguageSetting 15 "Reserve" 14 "Reserve" 13 "Reserve" 12 "Reserve" 11 "Reserve" 10 "Reserve" 9 "Reserve" 8 "Reserve" 7 "Reserve" 6 "Reserve" 5 "Reserve" 4 "Reserve" 3 "Arabic" 2 "Spanish" 1 "English" 0 "Chinese" ;
+VAL_ 1425 APA4_St_TrackingQuit 20 "发生可恢复事件后，用户超过60s未响应 Pause_Event_Time_Out" 19 "周边有障碍物且超过60s Obstacle_Time_Out" 18 "驾驶员刹车时间超过60s Break_Time_Out" 17 "循迹中断次数超限  Over_Interruption_Time" 16 "循迹时间超限 Time_Out" 15 "轨迹超出规划 Beyond_The_Planning" 14 "车速超限 Over_Speed" 13 "人为干预方向盘 Human_Intervention" 12 "踩油门 Accelerator_Pedal_Pressed" 11 "后视镜折叠 Review_Mirror_Fold_Up" 10 "循迹过程中，TCU超过2s未响应 TCU_Time_Out" 9 "关联或干涉系统工作中 Related_System_Working" 8 "电子驻车系统开启 EPB_System_On" 7 "循迹过程中分动器4H/4L启动 Transfer_Case_On" 6 "循迹过程中差速锁锁死 EDL_Fault" 5 "档位无法正常切换 Gear_Fault" 4 "主动刹车系统失效 Break_Fault" 3 "非正常模式" 2 "关联系统故障  Related_System_Fault" 1 "关联ECU失效 Related_ECU_Failure" 0 "无事件 None" ;
+VAL_ 1425 APA4_St_ParkingOutMode 3 "Reserved" 2 "遥控泊出 Tele_Control_Parking_Out" 1 "一键泊出 One_Key_Parking_Out" 0 "NONE" ;
+VAL_ 1425 APA4_St_QuitIndication 24 "发生可恢复事件后，用户超过60s未响应 Pause_Event_Time_Out" 23 "周边有障碍物且超过60s Obstacle_Time_Out" 22 "驾驶员刹车时间超过60s Break_Time_Out" 21 "泊车中断次数超限  Over_Interruption_Time" 20 "泊车步骤次数超限  Over_Parking_Time" 19 "泊车时间超限 Time_Out" 18 "车位空间限制 Space_Limitation" 17 "轨迹超出规划 Beyond_The_Planning" 16 "车速超限 Over_Speed" 15 "手机端终止泊车 Tele_Control_Terminated" 14 "人为干预方向盘 Human_Intervention" 13 "踩油门 Accelerator_Pedal_Pressed" 12 "后视镜折叠 Review_Mirror_Fold_Up" 11 "泊车过程中，TCU超过2s未响应 TCU_Time_Out" 10 "手机连接异常 Tele_Control_Connect_Err" 9 "关联或干涉系统工作中 Related_System_Working" 8 "电子驻车系统开启 EPB_System_On" 7 "泊车过程中分动器4H/4L启动 Transfer_Case_On" 6 "泊车过程中差速锁锁死 EDL_Fault" 5 "档位无法正常切换 Gear_Fault" 4 "主动刹车系统失效 Break_Fault" 3 "非正常模式No Normal Mode" 2 "关联系统故障  Related_System_Fault" 1 "关联ECU失效 Related_ECU_Failure" 0 "无事件 None" ;
+VAL_ 1425 APA4_St_RecoverINTIndication 6 "退出确认" 5 "暂停恢复 Recover" 4 "手机端暂停 Tele_Control_Pause" 3 "周边有障碍物且存在事件小于60s Obstacle_In" 2 "任一车门打开 Door_Opened" 1 "安全带松开 SeatBelt_Loosened" 0 "无事件 None" ;
+VAL_ 1425 APA4_St_RequestFeedback 2 "Active" 1 "Available For control" 0 "unAvailable" ;
+VAL_ 1445 EMS12_St_ErrorLevel 7 "Reserve" 6 "Level 6" 5 "Level 5" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Inactive" ;
+VAL_ 1472 EMS4_F_CoolantTemperature 3 "Invalid" 2 "Value above upper limit(Not used)" 1 "Value below lower limit(Not used)" 0 "Valid" ;
+VAL_ 1472 EMS4_F_Barometer 3 "Invalid" 2 "Value above upper limit(Not used)" 1 "Value below lower limit(Not used)" 0 "Valid" ;
+VAL_ 1472 EMS4_N_Barometer 254 "Invalid" ;
+VAL_ 1504 EGSM1_St_DrvRqShft 15 "Signal not available（double fault shift sensor）" 14 "Shifter not initialized" 7 "L_Backward 1" 6 "L_Forward 1" 5 "L_Zero" 4 "Backward 2" 3 "Backward 1" 2 "Forward 1" 1 "Forward 2" 0 "Zero" ;
+VAL_ 1504 EGSM1_St_StayInM 3 "Reserved" 2 "Display ‘Please move the shift lever to Auto Lane’ and always ring" 1 "Display ‘Please move the shift lever to Auto Lane’ and only ring twice" 0 "No request" ;
+VAL_ 1504 EGSM1_St_DrvRqPark 3 "reserved" 2 "Park button fault" 1 "driver request park button" 0 "no request" ;
+VAL_ 1504 EGSM1_St_DrvRqUnlock 3 "reserved" 2 "reserved" 1 "Driver request unlock button" 0 "No request" ;
+VAL_ 1504 EGSM1_St_EShiftFault 1 "E-shift fault；" 0 "E-shift Normal；" ;
+VAL_ 1552 WCBS_ESP15_SolenoidTempture 255 "Invalid" ;
+VAL_ 1552 WCBS_ESP15_BatteryVoltageMin 255 "Invalid" ;
+VAL_ 1553 WCBS_ESP16_RWUEPBSwitch 3 "Invalid" 2 "Apply" 1 "Release" 0 "Neutral" ;
+VAL_ 1553 WCBS_ESP16_RWUActive 1 "Active" 0 "Inactive" ;
+VAL_ 1553 WCBS_ESP16_BrakePressureMax 255 "Invalid" ;
+VAL_ 1568 IPC1_F_OdometerParameter 1 "Value unreliable" 0 "Value OK" ;
+VAL_ 1568 IPC1_St_OilLevelWarning 1 "Warning" 0 "No warning" ;
+VAL_ 1600 WCBS_ESP3_F_FLWheelSpeed 3 "Not used" 2 "Not used" 1 "Invalid" 0 "Value OK" ;
+VAL_ 1600 WCBS_ESP3_F_FRWheelSpeed 3 "Not used" 2 "Not used" 1 "Invalid" 0 "Value OK" ;
+VAL_ 1602 WCBS_ESP18_BrushlessMotorTemptur 1023 "Invalid" ;
+VAL_ 1602 WCBS_ESP18_BrushlessMotorTime 65535 "Invalid" ;
+VAL_ 1603 WCBS_ESP17_N_BrakePedalStroke 255 "Invalid" ;
+VAL_ 1616 WCBS_ESP4_F_RLWheelSpeed 3 "Not used" 2 "Not used" 1 "Invalid" 0 "Value OK" ;
+VAL_ 1616 WCBS_ESP4_F_RRWheelSpeed 3 "Not used" 2 "Not used" 1 "Invalid" 0 "Value OK" ;
+VAL_ 1643 BSG3_F_PosTrqPt 1 "Valid" 0 "Invalid" ;
+VAL_ 1643 BSG3_F_NegTrqPt 1 "Valid" 0 "Invalid" ;
+VAL_ 1646 BSG_Diag1_St_BrushWearFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_CANComErr 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_CANComInv 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_DCVolSenFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_ExcSCFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_InverterFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_LoadDump 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_OvrHeat 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_OverVoltage 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_PHXCurrSenFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_PosSenFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_RevSpdFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_RotorOverCurr 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_StatorFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_StatorOverCurr 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_StalledRotorProt 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_TorqLevelFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_UnlockPTLFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_HighSpeed 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_UnderVolProt 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_CurExcSCHigh 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_CurExcSCLow 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_CurExcOffset 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_InvTempSenFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_3V3VolFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_12VolFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_15SWVolFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_12VRefVolFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_OperModeProt 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_VolCtrlFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_ExcDrStaMoFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_CrashFault 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_12VVolHigh 1 "Fault" 0 "No fault" ;
+VAL_ 1646 BSG_Diag1_St_12VVolLow 1 "Fault" 0 "No fault" ;
+VAL_ 1654 AC3_St_Auto 1 "On" 0 "Off" ;
+VAL_ 1654 AC3_St_RBlowerMode 5 "Reserved" 4 "Reserved" 3 "Foot" 2 "Face and Foot" 1 "Face" 0 "Standby" ;
+VAL_ 1654 AC3_St_RBlowerLevel 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Level 5" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Level 0" ;
+VAL_ 1654 AC3_N_RTempDisp 0 "18" ;
+VAL_ 1686 DVR2_St_Recording 1 "No record" 0 "CAN be record" ;
+VAL_ 1686 DVR2_St_SD 1 "No SD" 0 "SD" ;
+VAL_ 1686 DVR2_W_PhotoOverflow 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_ParkMonitor 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_SavFil 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_CommunFail 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_MPUStart 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_CamMalf 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_SDFormat 1 "Warning" 0 "Normal" ;
+VAL_ 1686 DVR2_W_SD 1 "Warning" 0 "Normal" ;
+
