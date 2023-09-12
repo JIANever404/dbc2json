@@ -1,1 +1,15 @@
-{"name": "", "version": "", "extra_sources": [], "initializers": [], "loopers": [], "buses": {"hs": {"speed": 500000}}, "commands": [{}]}
+{
+    "name": "",
+    "version": "",
+    "extra_sources": [],
+    "initializers": [],
+    "loopers": [],
+    "buses": {
+        "hs": {
+            "speed": 500000
+        }
+    },
+    "commands": [
+        {}
+    ]
+}
