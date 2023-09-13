@@ -150,6 +150,8 @@ def main(argv):
                 "byte_order": signal.byte_order,
                 # "writable": mode
             }
+            # print(type(signal.scale))
+            # print(type(signal.offset))
             if message.cycle_time is not None and message.cycle_time > 0:
                 signal_json["max_frequency"] = 1000.0 / message.cycle_time
             else:
@@ -159,11 +161,13 @@ def main(argv):
             else:
                 signal_json["unit"] = "none"
             if signal.minimum is not None:
+                # print(type(signal.minimum))
                 signal_json["min"] = float(signal.minimum)
             else:
                 signal_json["min"] = 0.0
             if signal.maximum is not None:
                 signal_json["max"] = float(signal.maximum)
+                # print(type(signal.maximum))
             else:
                 signal_json["max"] = 0.0
             if signal.is_multiplexer:
@@ -175,6 +179,45 @@ def main(argv):
             else:
                 signal_json["multiplexer_ids"] = []
 
+
+            #判断信号val类型
+            valtype="longlong"
+            if any(isinstance(val, float) for val in [signal.scale, signal.offset, signal.minimum, signal.maximum]):
+                #信号是一个float值
+                # print("is float")
+                valtype="float"
+            else:
+                #信号是一个整数值 至于是什么类型再继续细化
+                # print("is not float")
+                if signal.minimum is None or signal.maximum is None:
+                    #最大值最小值缺失 无法判断类型 统一为long long
+                    # print("is longlong")
+                    valtype="int64"
+                else:
+                    #最大值最小值都存在 根据最大最小值进一步细化类型
+                    if signal.minimum < 0:
+                        #说明是有符号类型整数
+                        if signal.minimum >= -128 and signal.maximum <= 127:
+                            valtype="int8"
+                        elif signal.minimum >= -32768 and signal.maximum <= 32767:
+                            valtype="int16"
+                        elif signal.minimum >= -2147483648 and signal.maximum <= 2147483647:
+                            valtype="int32"
+                        else:
+                            valtype="int64"
+                    else:
+                        #正整数
+                        if signal.maximum <= 255:
+                            valtype="uint8"
+                        elif signal.maximum <= 65535:
+                            valtype="uint16"
+                        elif signal.maximum <= 4294967295:
+                            valtype="uint32"
+                        else:
+                            valtype="uint64"
+            signal_json["value_type"] = valtype
+
+            #取出dbc的信号枚举
             enum_values = signal.conversion.choices
             if enum_values is not None:
                 # print(type(enum_values))
@@ -193,6 +236,8 @@ def main(argv):
                 signal_json["enums"] = enum_list
             else:
                 signal_json["enums"] = []
+
+            
 
             signal_list.append(signal_json)
 
